@@ -1,4 +1,4 @@
-# **Programming**
+# **Intro to Artificial Intelligence**
 ---
 ## The Hun School of Princeton
 ---
@@ -13,14 +13,15 @@ Office: Chesebro 128a
 (609) 921-7600, ext. 3412 
 
 ---
-Students in this course will focus on learning the fundamentals of programming using the Python programming language.  These concepts include constants, variables, parameterized functions, control structures, and basic data structures.  The design process process will be used as students combine their creativity and programming skills to build unique solutions to problems. 
+Introduction to Artificial Intelligence is a trimester course in which students will discover what artificial intelligence (AI) is, how it is currently used, and how it could be used in the future. They will be introduced to machine learning, deep learning, and neural networks and how they already make decisions in daily life. Students will be taught the history of AI, how it is used today, and delve into the future of AI and its many possible applications while exploring issues and concerns surrounding AI. Students will experiment with numerous AI applications, and do some basic programming of an artificially intelligent system.   
 
 ## **Units of Study** 
 ---
->**Unit 1: Basic Python and Console Interaction**  
->**Unit 2: Conditionals**  
->**Unit 3: Looping**  
->**Unit 4: Functions and Exceptions**  
+
+>**What is AI?**  
+>**How Does AI Work?**  
+>**AI in Gaming**  
+>**Ethics in AI**  
 
 ## **Materials & Supplies** 
 ---
@@ -76,7 +77,14 @@ If your personal device or home internet connection is not working, you are expe
 
 ### **Absences** 
 
-When absent, it is your responsibility to determine what work you missed and make it up and get class notes from a peer. You can check RaiderNet for an update of what was missed and/or meet with me to discuss it. You will have as many days as you were out to make up any work assigned *(ex.: 2 days absent \= 2 day extension)* Please see me during Extra Help with questions about the missed material and/or assignments. Note that any absences before an assessment or assignment is due does **not** extend the date of that work. You will still be responsible for taking any assessments on the scheduled day and handing in assignments on their dur date unless you have made other arrangments with me before or during your absence.
+When you are absent, it is your responsibility to determine what you missed and complete all required work. You should obtain class notes from a peer, check RaiderNet for updates, and/or meet with me to review missed material.
+
+You will have the same number of days you were absent to make up any work assigned during your absence
+*(Example: 2 days absent = 2-day extension).*
+
+If you have questions about missed material or assignments, please attend Extra Help.
+
+Please note: An absence before the day an assessment or assignment is due does **not** automatically extend the due date. You are still responsible for completing assessments on the scheduled date and submitting assignments on time unless you have made prior arrangements with me before or during your absence.
 
 Assessments given during an absence must be made up within 5 school days of returning to school. It is the your responsibility to contact me to schedule a make-up time.
 

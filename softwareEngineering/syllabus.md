@@ -1,6 +1,6 @@
-# **Intro to Computer Science**
+# **Software Engineering with Java Honors**
 ---
-## The Hun School of Princeton 
+## The Hun School of Princeton
 ---
 INSTRUCTOR: Mr. Paul Baier
 
@@ -13,19 +13,21 @@ Office: Chesebro 128a
 (609) 921-7600, ext. 3412 
 
 ---
-How does one go from being a consumer of technology to a creator of it? Intro to CS is a trimester course that will explore that question. Students will learn to think critically and systematically while designing programs and writing code. We will look deeper into what it means to practice good digital citizenship and safety online. We will seek to better understand the technology we use on a daily basis, its inherent biases, and the impact it has on our lives and interactions with the world around us. 
+How can we design and build software that is reliable, efficient, and solves real-world problems? Software Engineering with Java Honors is a year long course that explores a range of topics within the field of software engineering. We will develop proficiency with industry-standard tools, expand our understanding of programming through new paradigms and concepts, and deepen our expertise in familiar languages like Java.
 
 ## **Units of Study** 
 ---
-
->**Unit 1: Drawing with Shapes**  
->**Unit 2: Basic Animations**  
->**Unit 3: Giving Programs Options**  
->**Unit 4: Animating Lots of Shapes**
+>**Tools of the Trade**  
+>**Design Patterns**  
+>**Algorithmic Thinking and Problem Solving**  
+>**Databases**  
+>**Internet/Networking**  
+>**Software Development Lifecycle**  
+>**Testing**  
 
 ## **Materials & Supplies** 
 ---
-* Laptop ***or*** iPad with keyboard and Apple Pencil.  **Laptop is preferred**.  
+* Laptop capable of running the Java Software Development Kit (SDK)
 
 ## **Grade Distribution (not including final exam)**
 ---
@@ -77,7 +79,14 @@ If your personal device or home internet connection is not working, you are expe
 
 ### **Absences** 
 
-When absent, it is your responsibility to determine what work you missed and make it up and get class notes from a peer. You can check RaiderNet for an update of what was missed and/or meet with me to discuss it. You will have as many days as you were out to make up any work assigned *(ex.: 2 days absent \= 2 day extension)* Please see me during Extra Help with questions about the missed material and/or assignments. Note that any absences before an assessment or assignment is due does **not** extend the date of that work. You will still be responsible for taking any assessments on the scheduled day and handing in assignments on their dur date unless you have made other arrangments with me before or during your absence.
+When you are absent, it is your responsibility to determine what you missed and complete all required work. You should obtain class notes from a peer, check RaiderNet for updates, and/or meet with me to review missed material.
+
+You will have the same number of days you were absent to make up any work assigned during your absence
+*(Example: 2 days absent = 2-day extension).*
+
+If you have questions about missed material or assignments, please attend Extra Help.
+
+Please note: An absence before the day an assessment or assignment is due does **not** automatically extend the due date. You are still responsible for completing assessments on the scheduled date and submitting assignments on time unless you have made prior arrangements with me before or during your absence.
 
 Assessments given during an absence must be made up within 5 school days of returning to school. It is the your responsibility to contact me to schedule a make-up time.
 
