@@ -1,4 +1,4 @@
-## The Hun School of Princeton 2025-2026 
+## The Hun School of Princeton Computer Science 
 ---
 [Intro to AI](introAI/)
 
