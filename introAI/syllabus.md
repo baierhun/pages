@@ -20,7 +20,7 @@ Introduction to Artificial Intelligence is a trimester course in which students 
 
 >**What is AI?**  
 >**How Does AI Work?**  
->**AI in Gaming**  
+>**AI in Practice**  
 >**Ethics in AI**  
 
 ## **Materials & Supplies** 
@@ -88,7 +88,7 @@ Please note: An absence before the day an assessment or assignment is due does *
 
 Assessments given during an absence must be made up within 5 school days of returning to school. It is the your responsibility to contact me to schedule a make-up time.
 
-Please refer to the student handbook for the schoolwide late policy for points deductions and limitations on late work.
+Please refer to the student handbook for the school wide late policy for points deductions and limitations on late work.
 
 Early Dismissals are not absences. Submit all due assignments prior to our scheduled class time to receive full credit.
 
