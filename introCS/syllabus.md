@@ -18,6 +18,7 @@ How does one go from being a consumer of technology to a creator of it? Intro to
 ## **Units of Study** 
 ---
 
+>**Unit 0: Computer Ethics and Cyber Safety**  
 >**Unit 1: Drawing with Shapes**  
 >**Unit 2: Basic Animations**  
 >**Unit 3: Giving Programs Options**  
