@@ -4,6 +4,7 @@
 ### Mini Module
 * [Computer Ethics](miniModule/computerEthics)
 * [Cyber Safety](miniModule/cyberSafety)
+* [Final Projects](miniModule/finalProjects)
 
 ### Unit 1
 
