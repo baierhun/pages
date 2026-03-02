@@ -2,12 +2,20 @@
 
 ### Guided Listening Questions
 
-**Directions:** There are 10 questions below. As you listen to [the podcast](https://drive.google.com/file/d/1QK4wdMFvjfyybtgFgORX-lbSWSi36liN/view?usp=sharing), answer each question in order. Your answers should be meaningful and correct based on what you hear. This will be graded as complete/incomplete so be sure to answer every question meaningfully to avoid an incomplete grade.
+**Directions:** There are 10 questions and an audio podcast below. As you listen to , answer each question in order. Your answers should be meaningful and correct based on what you hear. This will be graded as complete/incomplete so be sure to answer every question meaningfully to avoid an incomplete grade.
+
+<iframe src="https://drive.google.com/file/d/1QK4wdMFvjfyybtgFgORX-lbSWSi36liN/preview" width="550" height="70"></iframe>
+
+<iframe frameborder="0" scrolling="no" height="130" width="100%" src="https://www.wnyc.org/widgets/ondemand_player/wnycstudios/#file=/audio/json/1488797/&share=1"></iframe>
+
+[transcript](http://www.wnycstudios.org/story/bb4e80db6260352d7f4a508a/transcript)
 
 The times for each part are listed below:
 1. 2:43-13:05  
 2. 16:53-26:18  
 3. 26:18-36:30
+
+If you are having issues, you can access the audio [here](https://drive.google.com/file/d/1QK4wdMFvjfyybtgFgORX-lbSWSi36liN/view?usp=sharing)
 
 ---
 
