@@ -12,3 +12,4 @@
 ### Unit DB
 * [DB Setup Script](db/dbSetupScript)
 * [DB Insert Page](db/addRecordPage)
+* [DB Delete Record](db/deleteRecord)
