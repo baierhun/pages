@@ -1,8 +1,8 @@
 # **Debate Instructions**
 
-**Resolution:** *Machines can be intelligent*
-**Teams:** 2 teams of 4 students
-**Moderators:** 2 students
+**Resolution:** *Machines can be intelligent*  
+**Teams:** 2 teams of 4 students  
+**Moderators:** 2 students  
 **Total Time:** 50 minutes (Debate ~40 minutes)
 
 ---
@@ -44,7 +44,7 @@
 ### **Moderators**
 
 * Keep time for all sections of the debate.
-* Ask 2–3 questions to each team during cross-examination.
+* Ask 3–5 questions to each team during cross-examination.
 * Ensure all team members speak and follow the rules.
 * Help resolve any disputes or confusion during the debate.
 

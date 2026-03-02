@@ -1,3 +1,17 @@
+## Debate Prep
+**Breakout Time: Debate Prep (10–15 minutes)**
+
+Use this time to prepare your team for the debate.
+
+* **Brainstorm** general arguments for and against the topic.
+* **Choose your strongest points** and think of examples or evidence to support them.
+* **Assign roles** (opening statement, rebuttal, closing, researcher, etc.).
+* **Divide responsibilities** so everyone contributes.
+* **Anticipate counterarguments** and plan responses.
+
+Be ready to present a clear, organized position when we reconvene.
+
+
 ## Examples / Topics for Debate
 
 ---

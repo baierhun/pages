@@ -6,7 +6,7 @@
 * [Plant AI Assignment](unit1/plantAI)
 * [Debate Assignment](unit1/debateAssignment)
 * [Debate Instructions](unit1/debateInstructions)
-* [Debate Topics](unit1/debateTopics)
+* [Debate Prep](unit1/debatePrep)
 * [Debate Rubric](unit1/debateRubric)
 
 ### Unit 2
