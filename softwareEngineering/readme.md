@@ -13,3 +13,4 @@
 * [DB Setup Script](db/dbSetupScript)
 * [DB Insert Page](db/addRecordPage)
 * [DB Delete Record](db/deleteRecord)
+* [Message Dialog Code](db/messageDialogCode)

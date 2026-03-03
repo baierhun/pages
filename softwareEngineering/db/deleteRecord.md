@@ -16,7 +16,7 @@ This must:
 
 ## ✅ Requirements
 
-You must implement **at least one working way** to delete a record:
+You must implement **at least one working way** to delete a record. Some suggested places:
 
 * ✔ Option A: Add a **Delete button when listing records**
 * ✔ Option B: Add a **Delete button when viewing an individual record**
@@ -43,10 +43,7 @@ Do **NOT** concatenate the id into the SQL string.
 
 ### 2. Safety Consideration (Required)
 
-Before deleting, you must:
-
-* Either ask for confirmation (ex: “Are you sure?” prompt)
-* OR clearly indicate which record is being deleted
+Before deleting, you must ask for confirmation (ex: “Are you sure?” prompt)
 
 We don’t want accidental deletions.
 
@@ -94,7 +91,7 @@ The deleted record should no longer appear.
 5. Copy the **commit URL**.
 6. Submit that URL to Canvas.
 
-You are submitting the **commit link**, not a zip file.
+You are submitting the **commit link**.
 
 ---
 
