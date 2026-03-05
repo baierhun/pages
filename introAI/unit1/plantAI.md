@@ -13,7 +13,8 @@ The times for each part are listed below:
 2. 15:05-25:35  
 3. 25:35-36:30
 
-If you are having issues, you can access the audio [here](https://drive.google.com/file/d/1QK4wdMFvjfyybtgFgORX-lbSWSi36liN/view?usp=sharing)
+If you are having issues, you can access the audio
+ <a href="https://drive.google.com/file/d/1QK4wdMFvjfyybtgFgORX-lbSWSi36liN/view?usp=sharing" target="_blank" rel="noopener noreferrer">here</a>
 
 ---
 
