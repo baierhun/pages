@@ -4,6 +4,8 @@
 
 **(Input → Process → Output)**
 
+Please complete this project in the CodeHS `Unit 1 Project` section
+
 ### Skills You Must Demonstrate
 
 * `print()`
@@ -48,6 +50,11 @@ Your program must:
 * Convert at least **2 inputs into numbers**
 * Perform at least **3 calculations**
 * Display clearly labeled output
-* Include a program title
+* Include a program title comment:
+```python
+    # Programmer: Alan Turing
+    # Date: 3/15/1940
+    # Description: This program deciphers enigma machine messages
+```
 
 ---
