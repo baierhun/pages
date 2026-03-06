@@ -9,6 +9,7 @@
 * [Debate Instructions](unit1/debateInstructions)
 * [Debate Prep](unit1/debatePrep)
 * [Debate Rubric](unit1/debateRubric)
+* [Debate Presentation](unit1/debate/presentation)
 
 ### Unit 2
 

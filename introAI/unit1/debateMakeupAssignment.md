@@ -2,7 +2,7 @@
 
 **Topic:** *Resolved: Machines Can Be Intelligent*
 
-Since you will be absent on the day of the debate, you will complete this assignment instead of serving as the moderator.
+Since you will be absent on the day of the debate, you will complete this assignment instead.
 
 ### Part 1: Moderator Questions
 
