@@ -14,3 +14,4 @@
 * [DB Insert Page](db/addRecordPage)
 * [DB Delete Record](db/deleteRecord)
 * [Message Dialog Code](db/messageDialogCode)
+* [Core Skills Exam](db/coreSkillsExam)
