@@ -18,3 +18,6 @@
 ### Unit 3
 
 ### Unit 4
+
+### Resources
+* [Style Guide](resources/styleGuide.md)
