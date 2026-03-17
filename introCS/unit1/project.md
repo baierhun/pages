@@ -2,38 +2,42 @@
 
 ### CREATIVE TASK
 
-In this Creative Task, you will design a visual component of your **final game project** using shapes, colors, and labels. This could be your **main character, a background, or a level design**.
+In this Creative Task, you will create a **poster advertisement for your final game project** using shapes, colors, and labels.
 
-You will use different properties with your shapes including gradients and opacity.
+Your poster should visually promote your game and give the viewer an idea of what the game is about. You will use different properties with your shapes including gradients and opacity.
+
+**Important:** You will reuse parts of this design in future assignments when you begin building your actual game. Take your time to carefully design your **setting, characters, and visual elements**, as they will become the foundation of your game later in the course.
 
 ---
 
 ## 📝 Project Requirements
 
-You will use different shapes to create a complex game element. The shapes must be combined and layered in such a way to create a new object that is irregularly shaped and clearly part of your game.
+You will use different shapes to create a complex poster design. The shapes must be combined and layered in such a way to create a new object that is irregularly shaped and clearly represents your game.
 
-Your design must include, **at minimum**:
+Your poster must include, **at minimum**:
 
 * 3 different types of shapes (not including the label):
   circles, stars, rectangles, ovals, and lines
-* 1 label (for example: a title, character name, score, or instructions)
+* 1 label (for example: game title, tagline, or instructions like “Press Start”)
 * 1 gradient property
 * 1 opacity property
 * Comments, groupings, and line breaks to organize your code
 
-Your implementation of the requirements must be coherent, relevant, meaningful, and add to your game design. For example, changing a shape's opacity to 99 just to fulfill the requirement will **not** count as fulfilling the requirement.
+Your implementation of the requirements must be coherent, relevant, meaningful, and add to your poster. For example, changing a shape's opacity to 99 just to fulfill the requirement will **not** count as fulfilling the requirement.
 
 ---
 
-### 🎮 Design Ideas
+### 🎮 Poster Ideas
 
-You may choose to create:
+Your advertisement might include:
 
-* A **main character** (player or enemy)
-* A **game background** (environment or setting)
-* A **level layout** (platforms, obstacles, terrain)
+* Your **game title**
+* A **main character or enemy**
+* A **background or setting**
+* A short **tagline or slogan**
+* Visual hints about the **goal or style** of the game
 
-Think about how your design will fit into your final game later in the course.
+Think about what would make someone want to play your game.
 
 ---
 
