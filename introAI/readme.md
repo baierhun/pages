@@ -12,8 +12,11 @@
 * [Debate Presentation](unit1/debate/presentation)
 
 ### Unit 2
-* [Fruit Classifier Activity](unit2/fruitClassifierActivity.md)
-* [Fruit Guesser](unit2/fruitGuesser.md)
+* Classifier Activity
+    * [Fruit Classifier Activity](unit2/classifierActivity/fruitClassifierActivity.md)
+    * [Fruit Guesser](unit2/classifierActivity/fruitGuesser.md)
+    * [Fruit Classifier Rules Template](unit2/classifierActivity/fruitClassifierRulesBlank.md)
+    * [Fruit Classifier Results Template](unit2/classifierActivity/fruitClassifierResultsBlank.md)
 * [Bias Data Assignment](unit2/biasData.md)
 
 ### Unit 3

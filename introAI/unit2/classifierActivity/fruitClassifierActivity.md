@@ -46,7 +46,7 @@ You must create **6–8 rules minimum**.
 * ❌ **2 NO rules** – features that automatically disqualify it
 
 
-⚖️ Dont' forget about **edge cases** – the tricky situations outside of the "norm" (like different colors, sizes, or shapes)
+⚖️ Don't forget about **edge cases** – the tricky situations outside of the "norm" (like different colors, sizes, or shapes)
 
 ### Rule Guidelines:
 
@@ -72,12 +72,6 @@ You must create **6–8 rules minimum**.
 | ----- | ------ | -------- | ----- |
 |       |        |          |       |
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 ---
 
 ## ⚠️ Part 5: Find Failures
