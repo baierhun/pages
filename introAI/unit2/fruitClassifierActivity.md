@@ -64,6 +64,7 @@ You must create **6–8 rules minimum**.
     * For every fruit, read the rules and determine if the fruit on the webpage is the classifier's target fruit.
     * Record yes or no, then reveal the fruit on the webpage to check if the classifier classified the fruit correctly. Record the result
     * Write the name of the fruit under the `Image` heading below
+      * Make sure to write it exactly as it appears so your partner can search for it.
     * Do this for a minimum of 10 fruits
 3. Record results:
 
