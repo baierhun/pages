@@ -12,6 +12,8 @@
 * [Debate Presentation](unit1/debate/presentation)
 
 ### Unit 2
+* [Fruit Data Set](unit2/fruitDataSet.md)
+* [Bias Data Assignment](unit2/biasData.md)
 
 ### Unit 3
 
