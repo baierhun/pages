@@ -67,9 +67,10 @@ You must create **6–8 rules minimum**.
     * Do this for a minimum of 10 fruits
 3. Record results:
 
-| Image | YES/NO | Correct? | Notes |  
-| ----- | ------ | -------- | ----- |  
-|       |        |          |       |  
+| Image | YES/NO | Correct? | Notes |
+| ----- | ------ | -------- | ----- |
+|       |        |          |       |
+
 <br>
 <br>
 <br>
