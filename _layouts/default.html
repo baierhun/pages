@@ -18,6 +18,37 @@
       border-left: 0.25em solid #dfe2e5;
       margin: 1.5em 0;
     }
+
+    /* Inline Code (Single Ticks) */
+    code {
+      padding: 0.2em 0.4em;
+      margin: 0;
+      font-size: 85%;
+      background-color: rgba(27, 31, 35, 0.05);
+      border-radius: 6px;
+      font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+    }
+
+    /* Code Blocks (Triple Ticks) */
+    pre {
+      padding: 16px;
+      overflow: auto;
+      font-size: 85%;
+      line-height: 1.45;
+      background-color: #f6f8fa;
+      border-radius: 6px;
+      margin-top: 0;
+      margin-bottom: 16px;
+    }
+
+    /* Ensure code inside pre blocks doesn't get the inline background */
+    pre code {
+      background-color: transparent;
+      padding: 0;
+      margin: 0;
+      font-size: inherit;
+      border-radius: 0;
+    }
   </style>
 </head>
 <body style="font-family: Arial, sans-serif; max-width: 900px; margin: auto;">
