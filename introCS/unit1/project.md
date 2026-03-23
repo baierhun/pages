@@ -43,9 +43,11 @@ Think about what would make someone want to play your game.
 
 ### ⚠️ Examples
 
-**Simple Design (Does NOT meet project requirements)** <img src="../assets/unit1MickeySimple.png" alt="Simple Mickey" style="width:80%;">
+**Simple Design**  
+<img src="../assets/unit1ProjectSimple.png" alt="Simple Project" style="width:80%;">
 
-**Complex Design (Meets requirements)** <img src="../assets/unit1MickeyComplex.png" alt="Complex Mickey" style="width:80%;">
+**Complex Design**  
+<img src="../assets/unit1ProjectComplex.png" alt="Complex Project" style="width:80%;">
 
 ---
 
