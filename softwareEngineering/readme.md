@@ -13,5 +13,6 @@
 * [DB Setup Script](db/dbSetupScript)
 * [DB Insert Page](db/addRecordPage)
 * [DB Delete Record](db/deleteRecord)
+* [DB Update Record](db/updateRecord)
 * [Message Dialog Code](db/messageDialogCode)
 * [Core Skills Exam](db/coreSkillsExam)
