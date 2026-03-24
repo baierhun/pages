@@ -7,6 +7,8 @@
 * [Project](unit1/project)
 
 ### Unit 2
+* [Guess the Data Type!](unit2/guessTheDataType)
+* [Exercises](unit2/exercises)
 
 ### Unit 3
 
