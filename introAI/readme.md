@@ -18,6 +18,7 @@
     * [Fruit Classifier Rules Template](unit2/classifierActivity/fruitClassifierRulesBlank.md)
     * [Fruit Classifier Results Template](unit2/classifierActivity/fruitClassifierResultsBlank.md)
 * [Bias Data Assignment](unit2/biasData.md)
+* [Study Guide](unit2/studyGuide)
 
 ### Unit 3
 
