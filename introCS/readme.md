@@ -11,6 +11,8 @@
 * [Exercises](unit1/exercises)
 * [Project](unit1/project)
 * [Coding Challenge](unit1/codingChallenge)
+* [Practice Test](unit1/practiceTest)
+* [Practice Test Answers](unit1/practiceTestAnswers)
 
 
 ### Unit 2
