@@ -64,11 +64,11 @@ Your goal is simple: **earn as many points as you can before time runs out.**
 
 ### Directions
 
-You may only use the **CS Academy website** to complete this in-class coding challenge. You may not use any other outside resources.
+You may only use the **course platform** to complete this in-class coding challenge. You may not use any other outside resources.
 
 This includes (but is not limited to):
 
-* Search engines or websites outside of CS Academy
+* Search engines or websites outside of the course platform
 * AI tools or chatbots
 * Browser extensions or developer tools
 * Help from other people

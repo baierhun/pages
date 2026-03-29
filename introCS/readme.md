@@ -23,3 +23,4 @@
 
 ### Resources
 * [Style Guide](resources/styleGuide.md)
+* [Coding Challenge Instructions](resources/codingChallengeInstructions)
