@@ -18,4 +18,7 @@
 * [Core Skills Exam](db/coreSkillsExam)
 
 ### Unit Web
+* [Http Intro Notes](web/httpIntroNotes)
+* [Http Scavenger Hunt](web/httpScavengerHunt)
+* [Http Notes II](web/httpNotesII)
 * [Code Investigation](web/codeInvestigation)
