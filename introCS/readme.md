@@ -16,6 +16,8 @@
 
 
 ### Unit 2
+* [Exercises](unit2/exercises)
+* [Project](unit2/project)
 
 ### Unit 3
 
