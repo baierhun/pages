@@ -4,7 +4,9 @@
 
 ### 🔗 Repository
 
-[https://github.com/baierhun/starWars](https://github.com/baierhun/starWars)
+Use this project as a template for your work.
+
+<a href="https://github.com/baierhun/starWars" target="_blank" rel="noopener noreferrer">https://github.com/baierhun/starWars</a>
 
 ---
 
@@ -77,7 +79,7 @@ Explain your reasoning.
 
    * Where are they defined?
 
-10. Is there anything that looks like a build or run system?
+10. Is there anything that looks like a build system?
 
 ---
 
