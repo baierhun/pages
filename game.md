@@ -1,8 +1,7 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Guess the Data Type!</title>
+<title>Classroom Coding Games</title>
 
 <style>
 body {
@@ -12,21 +11,25 @@ body {
     padding: 30px;
 }
 
+.controls {
+    margin-bottom: 20px;
+}
+
 #question {
     font-size: 24px;
-    margin: 30px 0;
+    margin: 20px auto;
     padding: 20px;
     background: white;
     border-radius: 10px;
-    display: inline-block;
+    display: block;
     text-align: left;
-    white-space: pre-line;
-    min-width: 350px;
+    white-space: pre;
+    max-width: 600px;
 }
 
 #answer {
-    font-size: 24px;
-    margin: 20px;
+    font-size: 22px;
+    margin: 15px;
     color: green;
     visibility: hidden;
 }
@@ -37,7 +40,6 @@ button {
     border: none;
     border-radius: 6px;
     cursor: pointer;
-    font-size: 14px;
 }
 
 .main-btn {
@@ -48,145 +50,141 @@ button {
 .round-btn {
     background: #6c757d;
     color: white;
-    font-size: 12px;
-    padding: 6px 10px;
-}
-
-#roundDisplay {
-    font-size: 20px;
-    margin-top: 10px;
-    font-weight: bold;
 }
 
 .scoreboard {
-    margin-top: 40px;
+    margin-top: 30px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 50px;
+    gap: 15px;
 }
 
 .team {
     background: white;
-    padding: 20px;
+    padding: 12px;
     border-radius: 10px;
-}
-
-.team input {
-    text-align: center;
-    font-size: 18px;
+    width: 140px;
 }
 
 .score {
-    font-size: 32px;
-    margin: 10px 0;
+    font-size: 26px;
+    margin: 8px 0;
 }
 
-select {
-    padding: 8px;
-    font-size: 16px;
-    margin-bottom: 10px;
+.team input {
+    width: 100%;
+    text-align: center;
 }
 </style>
 </head>
 
 <body>
 
-<h1>🎯 Guess the Data Type!</h1>
+<h1>🎮 Classroom Coding Games</h1>
 
-<select id="gameSelect" onchange="loadSelectedGame()">
-    <option>Loading games...</option>
-</select>
+<div class="controls">
+    <select id="gameSelect" onchange="loadSelectedGame()"></select>
 
-<div id="roundDisplay">Round 1</div>
+    <div>
+        <button class="round-btn" onclick="setRound(1)">🟢 Warm-Up</button>
+        <button class="round-btn" onclick="setRound(2)">🟡 Challenge</button>
+        <button class="round-btn" onclick="setRound(3)">🔴 Brain Burner</button>
+    </div>
+</div>
+
+<div>
+    <span>Timer: </span>
+    <span id="timerDisplay">00:00</span>
+    <select id="timerMode">
+        <option value="up">Count Up ⏱️</option>
+        <option value="down">Count Down ⏲️</option>
+    </select>
+    <input type="number" id="timerStart" value="60" min="1" style="width: 60px;"> seconds
+    <button class="main-btn" onclick="resetTimer()">Reset Timer</button>
+</div>
 
 <div id="question"></div>
 <div id="answer"></div>
 
 <button class="main-btn" onclick="showAnswer()">Show Answer</button>
 <button class="main-btn" onclick="nextQuestion()">Next Question</button>
-<br>
-<button class="round-btn" onclick="prevRound()">⬅️ Prev Round</button>
-<button class="round-btn" onclick="nextRound()">Next Round ➡️</button>
+<button class="main-btn" id="prevBtn" onclick="prevQuestion()">Previous Question</button>
 
-<div class="scoreboard">
-    <div class="team">
-        <input value="Team 1">
-        <div id="score1" class="score">0</div>
-        <button onclick="changeScore(1,1)">+</button>
-        <button onclick="changeScore(1,-1)">-</button>
-    </div>
+<div class="scoreboard" id="scoreboard"></div>
 
-    <div class="team">
-        <input value="Team 2">
-        <div id="score2" class="score">0</div>
-        <button onclick="changeScore(2,1)">+</button>
-        <button onclick="changeScore(2,-1)">-</button>
-    </div>
-</div>
+<button class="main-btn" onclick="addTeam()">➕ Add Team</button>
+<button class="main-btn" onclick="removeTeam()">➖ Remove Team</button>
 
 <script>
 // ---------------- HELPERS ----------------
-const intRange = () => Math.floor(Math.random()*10)+1;
 const rand = arr => arr[Math.floor(Math.random()*arr.length)];
-let round = 1;
 
-// ---------------- MARKDOWN GAME SYSTEM ----------------
+// ---------------- GAME FILES ----------------
 const gameFiles = [
-    "games/game_data_types.md",
-    "games/game2.md"
+    "games/data-types.md",
+    "games/boolean-logic.md"
 ];
 
 let games = {};
 let currentGameQuestions = [];
 
-// Load all markdown files
+// ---------------- ROUND SYSTEM ----------------
+let currentRound = 1;
+
+function setRound(r) {
+    currentRound = r;
+    resetGameState();
+    nextQuestion();
+}
+
+// ---------------- HISTORY ----------------
+let history = [];
+let historyIndex = -1;
+
+// ---------------- NO REPEAT TRACKING ----------------
+let unusedQuestions = [];
+
+// ---------------- LOAD GAMES ----------------
 async function loadGames() {
     for (let file of gameFiles) {
-        try {
-            let res = await fetch(file);
-            let text = await res.text();
-
-            let parsed = parseMarkdown(text);
-            games[parsed.name] = parsed.questions;
-        } catch (e) {
-            console.error("Error loading:", file);
-        }
+        let res = await fetch(file);
+        let text = await res.text();
+        let parsed = parseMarkdown(text);
+        games[parsed.name] = parsed.questions;
     }
-
     populateDropdown();
 }
 
-// Parse markdown
+// ---------------- PARSER ----------------
 function parseMarkdown(md) {
-    let lines = md.split("\n");
-
-    let name = lines[0].replace("# Game Name:", "").trim();
+    let nameMatch = md.match(/# Game Name:\s*(.*)/);
+    let name = nameMatch ? nameMatch[1].trim() : "Game";
 
     let questions = [];
-    let q = "", a = "";
+    let blocks = md.split("Q:");
+    blocks.shift();
 
-    for (let line of lines) {
-        if (line.startsWith("Q:")) {
-            q = line.replace("Q:", "").trim();
-        }
-        if (line.startsWith("A:")) {
-            a = line.replace("A:", "").trim();
-            questions.push({ q, a });
-        }
+    for (let block of blocks) {
+        let qMatch = block.match(/```([\s\S]*?)```/);
+        let aMatch = block.match(/A:\s*(.*)/);
+        let lMatch = block.match(/Level:\s*(.*)/);
+
+        if (!qMatch || !aMatch || !lMatch) continue;
+
+        questions.push({
+            q: qMatch[1].trim(),
+            a: aMatch[1].trim(),
+            level: lMatch[1].trim()
+        });
     }
 
     return { name, questions };
 }
 
-// Populate dropdown
+// ---------------- DROPDOWN ----------------
 function populateDropdown() {
     let select = document.getElementById("gameSelect");
-    select.innerHTML = "";
-
-    let defaultOption = document.createElement("option");
-    defaultOption.textContent = "Default Random Game";
-    defaultOption.value = "default";
-    select.appendChild(defaultOption);
 
     for (let name in games) {
         let option = document.createElement("option");
@@ -198,115 +196,155 @@ function populateDropdown() {
     loadSelectedGame();
 }
 
-// Load selected game
 function loadSelectedGame() {
-    let select = document.getElementById("gameSelect");
-    let gameName = select.value;
-
-    if (gameName === "default") {
-        currentGameQuestions = [];
-    } else {
-        currentGameQuestions = games[gameName];
-    }
-
+    let name = document.getElementById("gameSelect").value;
+    currentGameQuestions = games[name];
+    resetGameState();
     nextQuestion();
 }
 
-// ---------------- ORIGINAL ROUNDS ----------------
-function round1() {
-    let a = intRange(), b = intRange(), c = intRange();
-    let type = rand(["int","float","string","boolean","error"]);
+// ---------------- RESET STATE ----------------
+function resetGameState() {
+    history = [];
+    historyIndex = -1;
+    unusedQuestions = [];
+}
 
-    let options = {
-        int: [`${a}+${b}`,`${a}*${b}`,`${a}//${b}`,`${a}%${b}`,`${a}+${b}*${c}`],
-        float: [`${a}/${b}`,`${a}.0+${b}`,`${a}+${b}.0`,`${a}/${b}+${c}`],
-        string: [`"hi"`,`"a"*${a}`,`"hello"+"world"`],
-        boolean: [`${a}>${b}`,`${a}==${b}`,`${a}+${b}>${c}`],
-        error: [`"hi"+${a}`,`${a}+"hi"`,`"a"-"b"`,`"x"/2`]
+// ---------------- FILTER BY LEVEL ----------------
+function getQuestionPool() {
+    let levelMap = {
+        1: "warmup",
+        2: "challenge",
+        3: "brain"
     };
 
-    return { q:`x = ${rand(options[type])}`, a:type };
+    return currentGameQuestions.filter(q => q.level === levelMap[currentRound]);
 }
 
-function round2() {
-    let a = intRange(), b = intRange();
-    let lines = [`a=${a}`,`b=${b}`];
-    let type = rand(["int","float","string","boolean","error"]);
+// ---------------- GAME ----------------
+let timerInterval = null;
+let timerSeconds = 0;
+let timerCountingUp = true;
 
-    if (type==="int") lines.push(`c=a+b*2`,`d=c-a`);
-    else if (type==="float") lines.push(`c=a/b`,`d=c+2`);
-    else if (type==="string") lines.push(`c="hi"`,`d=c*a`);
-    else if (type==="boolean") lines.push(`c=a+b`,`d=c>=5`);
-    else lines.push(`c="hi"`,`d=c+a`);
+function startTimer() {
+    clearInterval(timerInterval);
 
-    return { q:lines.join("\n"), a:type };
+    const mode = document.getElementById("timerMode").value;
+    const startValue = parseInt(document.getElementById("timerStart").value, 10);
+
+    timerCountingUp = (mode === "up");
+    timerSeconds = timerCountingUp ? 0 : startValue;
+
+    updateTimerDisplay();
+
+    timerInterval = setInterval(() => {
+        if (timerCountingUp) {
+            timerSeconds++;
+        } else {
+            timerSeconds--;
+            if (timerSeconds <= 0) {
+                clearInterval(timerInterval);
+            }
+        }
+        updateTimerDisplay();
+    }, 1000);
 }
 
-function round3() {
-    let a = intRange(), b = intRange();
-    let lines = [`a=${a}`,`b=${b}`,`x=999`,`a=a+1`,`c=a*b+3`];
-    let type = rand(["int","float","boolean","error"]);
-
-    if (type==="int") lines.push(`d=c//2`);
-    else if (type==="float") lines.push(`d=c/2`);
-    else if (type==="boolean") lines.push(`d=c>a*b`);
-    else { lines[4]=`c="oops"`; lines.push(`d=c+a`); }
-
-    return { q:lines.join("\n"), a:type };
+function updateTimerDisplay() {
+    let minutes = Math.floor(timerSeconds / 60);
+    let seconds = timerSeconds % 60;
+    document.getElementById("timerDisplay").textContent =
+        `${minutes.toString().padStart(2,'0')}:${seconds.toString().padStart(2,'0')}`;
 }
 
-function round4() {
-    let data = round3();
-    if (Math.random()<0.5) {
-        data.q = data.q.replace(`a=a+1`,`a=a*2`);
-    }
-    return data;
+function resetTimer() {
+    clearInterval(timerInterval);
+    const mode = document.getElementById("timerMode").value;
+    const startValue = parseInt(document.getElementById("timerStart").value, 10);
+    timerSeconds = timerCountingUp ? 0 : startValue;
+    updateTimerDisplay();
 }
 
-function generateQuestion() {
-    if (round===1) return round1();
-    if (round===2) return round2();
-    if (round===3) return round3();
-    if (round===4) return round4();
-}
-
-// ---------------- GAME CONTROL ----------------
 function nextQuestion() {
-    if (currentGameQuestions.length > 0) {
-        let q = rand(currentGameQuestions);
-        document.getElementById("question").textContent = q.q;
-        document.getElementById("answer").style.visibility = "hidden";
-        document.getElementById("answer").textContent =
-            "Answer: " + (q.a === "error" ? "Error ❌" : q.a);
-        return;
+    startTimer();
+
+    let pool = getQuestionPool();
+    if (pool.length === 0) return;
+
+    // refill if empty
+    if (unusedQuestions.length === 0) {
+        unusedQuestions = [...pool];
     }
 
-    let q = generateQuestion();
+    let index = Math.floor(Math.random() * unusedQuestions.length);
+    let q = unusedQuestions.splice(index, 1)[0];
+
+    history = history.slice(0, historyIndex + 1);
+    history.push(q);
+    historyIndex = history.length - 1;
+
+    displayQuestion(q);
+    updatePrevButton();
+}
+
+function prevQuestion() {
+    if (history.length === 0) return;
+
+    if (historyIndex > 0) {
+        historyIndex--;
+    }
+
+    let q = history[historyIndex];
+    if (q) displayQuestion(q);
+
+    updatePrevButton();
+}
+
+function displayQuestion(q) {
+    if (!q) return;
+
     document.getElementById("question").textContent = q.q;
     document.getElementById("answer").style.visibility = "hidden";
     document.getElementById("answer").textContent =
-        "Answer: " + (q.a==="error" ? "Error ❌" : q.a);
+        "Answer: " + (q.a === "error" ? "Error ❌" : q.a);
 }
 
 function showAnswer() {
     document.getElementById("answer").style.visibility = "visible";
 }
 
-function nextRound() {
-    round++;
-    if (round > 4) round = 1;
-    updateRound();
+// ---------------- BUTTON STATE ----------------
+function updatePrevButton() {
+    document.getElementById("prevBtn").disabled = (historyIndex <= 0);
 }
 
-function prevRound() {
-    round--;
-    if (round < 1) round = 4;
-    updateRound();
+// ---------------- TEAMS ----------------
+let teamCount = 0;
+
+function addTeam() {
+    teamCount++;
+
+    let div = document.createElement("div");
+    div.className = "team";
+    div.id = "team"+teamCount;
+
+    div.innerHTML = `
+        <input value="Team ${teamCount}">
+        <div id="score${teamCount}" class="score">0</div>
+        <button onclick="changeScore(${teamCount},1)">+</button>
+        <button onclick="changeScore(${teamCount},-1)">-</button>
+    `;
+
+    document.getElementById("scoreboard").appendChild(div);
 }
 
-function updateRound() {
-    document.getElementById("roundDisplay").textContent = "Round " + round;
-    nextQuestion();
+function removeTeam() {
+    if (teamCount <= 0) return;
+
+    let el = document.getElementById("team"+teamCount);
+    if (el) el.remove();
+
+    teamCount--;
 }
 
 function changeScore(team, amt) {
@@ -314,7 +352,9 @@ function changeScore(team, amt) {
     el.textContent = parseInt(el.textContent)+amt;
 }
 
-// INIT
+// ---------------- INIT ----------------
+addTeam();
+addTeam();
 loadGames();
 </script>
 
