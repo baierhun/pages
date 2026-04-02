@@ -85,7 +85,7 @@ If you have questions about missed material or assignments, please attend Extra 
 
 Please note: An absence before the day an assessment or assignment is due does **not** automatically extend the due date. You are still responsible for completing assessments on the scheduled date and submitting assignments on time unless you have made prior arrangements with me before or during your absence.
 
-Assessments given during an absence must be made up within 5 school days of returning to school. It is the your responsibility to contact me to schedule a make-up time.
+Assessments given during an absence must be made up within 5 school days of returning to school. It is your responsibility to contact me to schedule a make-up time.
 
 Please refer to the student handbook for the schoolwide late policy for points deductions and limitations on late work.
 
