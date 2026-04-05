@@ -22,5 +22,6 @@
 * [Practice Test](unit2/practiceTest)
 
 ### Unit 3
+* [Vibe Coding Intro Activity](unit3/vibeCodingIntroActivity)
 
 ### Unit 4
