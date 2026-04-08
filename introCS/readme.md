@@ -1,4 +1,6 @@
 # Intro to CS
+[back](../)
+
 [Syllabus](syllabus)
 
 ### Mini Module

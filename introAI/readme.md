@@ -1,4 +1,6 @@
 # Intro to AI
+[back](../)
+
 [Syllabus](syllabus)
 
 ### Unit 1
