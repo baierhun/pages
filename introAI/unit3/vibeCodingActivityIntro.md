@@ -37,6 +37,8 @@ Paste this into the AI:
 
 ---
 
+<div class="break"></div>
+
 ### Step 3. Setup Github Pages
 Paste this into the AI:
 
@@ -84,6 +86,8 @@ Paste this into the AI:
 > Keep it beginner-friendly and explain what each part of the code does.
 
 ---
+
+<div class="break"></div>
 
 ### Step 7. Add an Image
 Paste this into the AI:

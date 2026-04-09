@@ -2,7 +2,7 @@
 
 ### Guided Listening Questions
 
-**Directions:** There are 10 questions and an audio podcast below. As you listen to , answer each question in order. Your answers should be meaningful and correct based on what you hear. This will be graded as complete/incomplete so be sure to answer every question meaningfully to avoid an incomplete grade.
+**Directions:** There are 10 questions and an audio podcast below. As you listen answer each question in order. Your answers should be meaningful and correct based on what you hear. This will be graded as complete/incomplete so be sure to answer every question meaningfully to avoid an incomplete grade.
 
 <iframe frameborder="0" scrolling="no" height="90" width="100%" src="https://www.wnyc.org/widgets/ondemand_player/wnycstudios/#file=/audio/json/1488797/&share=1"></iframe>
 

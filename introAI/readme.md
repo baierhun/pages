@@ -24,6 +24,13 @@
 * [Practice Test](unit2/practiceTest)
 
 ### Unit 3
-* [Vibe Coding Intro Activity](unit3/vibeCodingIntroActivity)
+* [Vibe Coding Activity Part I](unit3/vibeCodingActivityIntro)
+* [Vibe Coding Activity Part II (HTML)](unit3/vibeCodingActivityHTML)
+* [Vibe Coding Activity Part III (CSS)](unit3/vibeCodingActivityCSS)
+* [Vibe Coding Activity Part IV (JS)](unit3/vibeCodingActivityJS)
+* [Final Project](unit3/finalProject)
+* [HTML Study Guide](unit3/htmlStudyGuide)
+* [CSS Study Guide](unit3/cssStudyGuide)
+* [JS Study Guide](unit3/javascriptStudyGuide)
 
 ### Unit 4
