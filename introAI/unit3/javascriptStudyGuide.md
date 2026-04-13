@@ -52,6 +52,8 @@ It can:
 
 ---
 
+<div class="break"></div>
+
 ## 📥 4. Take User Input
 
 JavaScript can collect information from the __________________________.
@@ -108,6 +110,8 @@ They allow us to __________________________ data and use it later.
 
 ---
 
+<div class="break"></div>
+
 ## 🧩 Core Concept 2: Events
 
 An event is something the __________________________ does.
@@ -150,6 +154,40 @@ When the button is clicked:
 
 ---
 
+## 📁 Using an External JavaScript File
+
+Instead of writing JavaScript inside your HTML file, you can put it in a __________________________ file.
+
+This keeps your code more __________________________ and __________________________.
+
+---
+
+### 📝 Steps
+
+1. Create a new file called __________________________
+2. Move your JavaScript __________________________ into that file
+3. Link it to your HTML using the __________________________ tag
+
+---
+
+### 🔗 Connecting the File
+
+```html
+<script src="script.js"></script>
+```
+
+The `src` attribute tells the browser where to find the __________________________ file.
+
+---
+
+### ⚠️ Important
+
+The `<script>` tag is usually placed at the __________________________ of the HTML file (just before `</body>`).
+
+This helps make sure the __________________________ loads first.
+
+---
+
 ## 🤖 Vibe Coding Mindset
 
 You are NOT memorizing code.
@@ -180,5 +218,3 @@ Write 2 things you could ask AI to do with JavaScript:
 HTML builds the __________________________
 CSS __________________________ it
 JavaScript __________________________ to users
-
----

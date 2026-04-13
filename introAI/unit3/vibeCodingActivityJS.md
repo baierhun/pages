@@ -8,7 +8,11 @@
 
 You will use **JavaScript + AI** to make your website **interactive**.
 
-By the end, your site should **respond to user actions** (clicks, input, etc.).
+By the end, your site should:
+
+* Respond to user actions
+* Use an **external JavaScript file**
+* Include dynamic features
 
 ---
 
@@ -21,19 +25,34 @@ By the end, your site should **respond to user actions** (clicks, input, etc.).
 
 ---
 
-## 🚀 Step 1: Set Up JavaScript
+## 📁 Step 1: Set Up External JavaScript
 
 ### 📝 Task
 
-Add a `<script>` section to your HTML file.
+Create a separate JavaScript file and connect it to your HTML.
 
 👉 Ask AI:
 
-> “How do I add JavaScript to my HTML file?”
+> “How do I link an external JavaScript file to my HTML?”
 
-### ✅ Goal
+---
 
-Your page should now be able to run JavaScript.
+### ✅ Requirements
+
+* Create a file named **`script.js`**
+* Link it using:
+
+```html
+<script src="script.js"></script>
+```
+
+* Place the `<script>` tag at the **bottom** of your HTML file
+
+---
+
+### 🎯 Goal
+
+Your HTML and JavaScript are now **connected properly**
 
 ---
 
@@ -45,7 +64,7 @@ Create a button that shows a message when clicked.
 
 👉 Ask AI:
 
-> “Make a button that shows an alert when clicked”
+> “Make a button that shows an alert when clicked using an external JS file”
 
 ### ✅ Goal
 
@@ -68,7 +87,7 @@ Examples:
 
 👉 Ask AI:
 
-> “Make a button that changes the text on my page”
+> “Use JavaScript to change text on my page when a button is clicked (external file)”
 
 ### ✅ Goal
 
@@ -89,7 +108,7 @@ Examples:
 
 👉 Ask AI:
 
-> “Take a user’s name from an input box and display a welcome message”
+> “Get input from a text box and display it on the page using JavaScript”
 
 ### ✅ Goal
 
@@ -111,7 +130,7 @@ Examples:
 
 👉 Ask AI:
 
-> “Use if else to show different messages depending on what the user enters”
+> “Use if else in JavaScript to show different messages depending on user input”
 
 ### ✅ Goal
 
@@ -132,11 +151,11 @@ Add ONE of the following:
 
 👉 Ask AI:
 
-> “Make a random [idea] generator using JavaScript”
+> “Make a random generator using JavaScript in an external file”
 
 ### ✅ Goal
 
-Your site does something **unexpected or dynamic**
+Your site does something **dynamic or unexpected**
 
 ---
 
@@ -165,12 +184,12 @@ Your site works without errors
 Customize your site:
 
 * Add more buttons
-* Add better messages
 * Combine features
+* Improve messages
 
 👉 Ask AI:
 
-> “How can I improve my interactive website?”
+> “How can I improve my interactive website using JavaScript?”
 
 ---
 
@@ -178,6 +197,8 @@ Customize your site:
 
 Your website must include:
 
+✅ An **external JavaScript file (`script.js`)**
+✅ A properly linked `<script src="script.js"></script>`
 ✅ At least **1 button with a click event**
 ✅ At least **1 change to the page (text, color, etc.)**
 ✅ At least **1 user input feature**
@@ -192,13 +213,12 @@ Answer in 1–2 sentences each:
 
 1. What did you make your website do?
 2. What was the most interesting thing JavaScript allowed you to do?
-3. What is one prompt that worked really well for you?
+3. How did using an external JavaScript file help organize your code?
 
 ---
 
 ## 🧠 Reminder
 
-> You are not learning JavaScript by memorizing.
-> You are learning how to **build with it using AI**.
-
----
+> HTML builds the structure
+> CSS styles it
+> JavaScript (in a separate file) makes it interactive
