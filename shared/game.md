@@ -23,7 +23,11 @@ body {
     border-radius: 10px;
     display: block;
     text-align: left;
-    white-space: pre;
+
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+
     max-width: 600px;
 }
 
@@ -76,6 +80,65 @@ button {
     width: 100%;
     text-align: center;
 }
+
+/* Toggle container */
+.toggle-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 14px; /* slightly smaller text */
+}
+
+/* Switch wrapper (smaller) */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 36px;   /* was 50px */
+    height: 20px;  /* was 26px */
+}
+
+/* Hide default checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Slider background */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background-color: #ccc;
+    border-radius: 20px;
+    transition: 0.25s;
+}
+
+/* Slider circle (scaled down) */
+.slider:before {
+    content: "";
+    position: absolute;
+    height: 14px;   /* was 20px */
+    width: 14px;    /* was 20px */
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.25s;
+}
+
+/* Checked state */
+.switch input:checked + .slider {
+    background-color: #007bff;
+}
+
+.switch input:checked + .slider:before {
+    transform: translateX(16px); /* adjusted for smaller width */
+}
+
 </style>
 </head>
 
@@ -90,6 +153,16 @@ button {
         <button class="round-btn" onclick="setRound(1)">🟢 Warm-Up</button>
         <button class="round-btn" onclick="setRound(2)">🟡 Challenge</button>
         <button class="round-btn" onclick="setRound(3)">🔴 Brain Burner</button>
+    </div>
+    <div class="toggle-container">
+        <span>Ordered</span>
+
+        <label class="switch">
+            <input type="checkbox" id="randomToggle" checked>
+            <span class="slider"></span>
+        </label>
+
+        <span>Random</span>
     </div>
 </div>
 
@@ -123,7 +196,8 @@ const rand = arr => arr[Math.floor(Math.random()*arr.length)];
 // ---------------- GAME FILES ----------------
 const gameFiles = [
     "games/data-types.md",
-    "games/boolean-logic.md"
+    "games/boolean-logic.md",
+    "games/loop-practice.md"
 ];
 
 let games = {};
@@ -276,8 +350,18 @@ function nextQuestion() {
         unusedQuestions = [...pool];
     }
 
-    let index = Math.floor(Math.random() * unusedQuestions.length);
-    let q = unusedQuestions.splice(index, 1)[0];
+    const isRandom = document.getElementById("randomToggle").checked;
+
+    let q;
+
+    if (isRandom) {
+        // RANDOM MODE
+        let index = Math.floor(Math.random() * unusedQuestions.length);
+        q = unusedQuestions.splice(index, 1)[0];
+    } else {
+        // ORDERED MODE
+        q = unusedQuestions.shift();
+    }
 
     history = history.slice(0, historyIndex + 1);
     history.push(q);
@@ -356,6 +440,12 @@ function changeScore(team, amt) {
 addTeam();
 addTeam();
 loadGames();
+
+document.getElementById("randomToggle")
+    .addEventListener("change", () => {
+        resetGameState();
+        nextQuestion();
+    });
 </script>
 
 </body>
