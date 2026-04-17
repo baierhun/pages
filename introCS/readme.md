@@ -16,12 +16,13 @@
 * [Practice Test](unit1/practiceTest)
 * [Practice Test Answers](unit1/practiceTestAnswers)
 
-
 ### Unit 2
 * [Exercises](unit2/exercises)
 * [Project](unit2/project)
 
 ### Unit 3
+* [Exercises](unit3/exercises)
+* [Project](unit3/project)
 
 ### Unit 4
 
