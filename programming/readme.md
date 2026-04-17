@@ -15,6 +15,9 @@
 * [Project](unit2/project)
 
 ### Unit 3
+* [Exercises](unit3/exercises)
+* [Project](unit3/project)
+* [Practice Test](unit3/practiceTest)
 
 ### Unit 4
 * [Exercises](unit4/exercises)

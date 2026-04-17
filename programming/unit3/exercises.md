@@ -9,4 +9,4 @@ CodeHS Practice Activities are to be completed for each lesson within the unit. 
 - **3.1** – While Loops – 3 pts  
 - **3.2** – Sentinel and Count Controlled Loops – 2 pts  
 - **3.3** – Shortcut Operators and Boolean Variables  – 2 pts  
-- **3.4** – For Loops – 3 pts  
+- ~~**3.4** – For Loops – 3 pts~~
