@@ -32,5 +32,6 @@
 * [HTML Study Guide](unit3/htmlStudyGuide)
 * [CSS Study Guide](unit3/cssStudyGuide)
 * [JS Study Guide](unit3/javascriptStudyGuide)
+* [Practice Test](unit3/practiceTest)
 
 ### Unit 4
