@@ -35,3 +35,6 @@
 * [Practice Test](unit3/practiceTest)
 
 ### Unit 4
+* [Project](unit4/project)
+* [Find the NPC Activity (Optional)](unit4/findTheNPCActivity)
+* [Gaming Study Guide](unit4/gamingStudyGuide)
