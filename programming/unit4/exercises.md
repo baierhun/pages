@@ -6,9 +6,7 @@ CodeHS Practice Activities are to be completed for each lesson within the unit. 
 
 ## Activities
 
-- **4.1** – Practice Activities – 1 pt  
+- **4.1** – Practice Activities – 2 pt  
 - **4.2** – Practice Activities – 2 pts  
 - **4.3** – Practice Activities – 2 pts  
-- **4.4** – Skipped – 0 pts  
-- **4.5** – Practice Activities – 2 pts  
-- **4.5.7** – Graded Separately  
+- **4.4** – Practice Activities – 4 pts  
