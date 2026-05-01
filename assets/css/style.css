@@ -1,65 +1,130 @@
-body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-    line-height: 1.6;
-    padding: 20px;
+.break {
+  page-break-after: always;
 }
 
-table {
-    border-collapse: collapse;
-    width: 100%;
-    margin-bottom: 16px;
+li {
+    margin: 5pt;
 }
 
-th,
-td {
-    border: 1px solid #dfe2e5;
-    padding: 6px 13px;
-}
-
-tr:nth-child(even) {
-    background-color: #f6f8fa;
-}
-
-th {
-    font-weight: 600;
-    background-color: #f6f8fa;
-    text-align: left;
-}
-
-blockquote {
-    padding: 0 1em;
-    color: #6a737d;
-    border-left: 0.25em solid #dfe2e5;
-    margin: 1.5em 0;
+:not(pre) > code {
+  color: #4c566a !important;
+  background-color: #f0f2f6;
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-family: "Courier New", Courier, monospace;
 }
 
 /* Inline Code (Single Ticks) */
 code {
-    padding: 0.2em 0.4em;
-    margin: 0;
-    font-size: 85%;
-    background-color: rgba(27, 31, 35, 0.05);
-    border-radius: 6px;
-    font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+  padding: 0.2em 0.4em;
+  margin: 0px;
+  font-size: 85%;
+  background-color: rgba(27, 31, 35, 0.05);
+  border-radius: 6px;
+  font-family:
+    ui-monospace,
+    SFMono-Regular,
+    SF Mono,
+    Menlo,
+    Consolas,
+    Liberation Mono,
+    monospace;
 }
 
 /* Code Blocks (Triple Ticks) */
 pre {
-    padding: 16px;
-    overflow: auto;
-    font-size: 85%;
-    line-height: 1.45;
-    background-color: #f6f8fa;
-    border-radius: 6px;
-    margin-top: 0;
-    margin-bottom: 16px;
+  padding: 5pt;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f6f8fa;
+  border-radius: 6px;
+  margin-top: 0px;
+  margin-bottom: 16px;
 }
 
 /* Ensure code inside pre blocks doesn't get the inline background */
 pre code {
-    background-color: transparent;
-    padding: 0;
+  background-color: transparent;
+  padding: 0px;
+  margin: 0px;
+  font-size: inherit;
+  border-radius: 0;
+}
+
+@media all {
+  /* The blockquote container */
+  blockquote {
+    margin: 1.5em 0;
+    padding: 0.5em 1.5em;
+    border-left: 4px solid #568ce9; /* The classic vertical line */
+    color: #555555; /* Subtle grey for the quote text */
+    background-color: #fafafa; /* Very light tint for contrast */
+  }
+
+  /* Handling the paragraph inside the blockquote */
+  blockquote p {
     margin: 0;
-    font-size: inherit;
-    border-radius: 0;
+    line-height: 1.6;
+    font-style: italic; /* Makes it feel like a quote */
+  }
+
+  /*
+    Optional: Add a little "quote" icon or symbol if your font supports it
+        blockquote::before {
+            content: "/"";
+            font-size: 2em;
+            font-family: Georgia, serif;
+            color: #568ce9;
+            float: left;
+            margin-left: -0.6em;
+            margin-top: -0.2em;
+        }
+    */
+}
+
+/* Print-specific tweaks */
+@media print {
+  blockquote {
+    border-left-color: #568ce9; /* Darker line for better print contrast */
+    background-color: #fafafa; /* Save ink */
+    page-break-inside: avoid; /* Prevents splitting a quote across pages */
+  }
+}
+
+.answer-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-style: hidden;
+  margin-bottom: 10pt;
+}
+.answer-table td {
+  width: 50%;
+  vertical-align: top;
+  border: 1px solid #dfdede;
+  padding: 10px;
+  height: 120px; /* forces equal height */
+}
+.answer-table pre {
+  margin: 0;
+  font-family: monospace;
+  background-color: #496ff926;
+}
+
+@media all {
+    body {
+        /* Standard browser size is usually 12pt; 9pt or 10pt is standard for print */
+        font-size: 10pt !important;
+    }
+
+    /* Code blocks often need an extra nudge to stay small */
+    code, pre {
+        font-size: 8.5pt !important;
+        line-height: 1.2 !important;
+    }
+
+    /* Ensure blockquotes don't stay huge */
+    blockquote p {
+        font-size: 10pt !important;
+    }
 }
