@@ -43,32 +43,33 @@
 <tr><td>
 * A.
 
-```python
+<pre>
 def square(x):
     print(x * x)
-```
+</pre>
+
 </td><td>
 * B.
 
-```python
+<pre>
 def square(x):
     return x * x
-```
+</pre>
 </td></tr><tr><td>
 
 * C.
 
-```python
+<pre>
 def square:
     return x * x
-```
+</pre>
 </td><td>
 
 * D.
 
-```python
+<pre>
 square(x) = x * x
-```
+</pre>
 </td></tr></table>
 
 ---
