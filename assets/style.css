@@ -114,17 +114,17 @@ pre code {
 @media all {
     body {
         /* Standard browser size is usually 12pt; 9pt or 10pt is standard for print */
-        font-size: 10pt !important;
+        font-size: 11pt !important;
     }
 
     /* Code blocks often need an extra nudge to stay small */
     code, pre {
-        font-size: 8.5pt !important;
+        font-size: 9.5pt !important;
         line-height: 1.2 !important;
     }
 
     /* Ensure blockquotes don't stay huge */
     blockquote p {
-        font-size: 10pt !important;
+        font-size: 11pt !important;
     }
 }
