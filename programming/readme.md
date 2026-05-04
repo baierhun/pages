@@ -21,3 +21,8 @@
 
 ### Unit 4
 * [Exercises](unit4/exercises)
+* [Practice Test](unit4/practiceTest)
+
+### Final Project
+* [Final Project](final/project)
+
