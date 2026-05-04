@@ -128,3 +128,12 @@ pre code {
         font-size: 11pt !important;
     }
 }
+
+.spacer {
+  /* Default spacing if no number is provided */
+  --scale: 1; 
+  
+  /* The math: 1rem (16px) multiplied by your number */
+  height: calc(var(--scale) * 1rem);
+  width: 100%;
+}

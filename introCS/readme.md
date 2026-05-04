@@ -23,8 +23,11 @@
 ### Unit 3
 * [Exercises](unit3/exercises)
 * [Project](unit3/project)
+* [Practice Test](unit3/practiceTest)
 
-### Unit 4
+### Final Exam
+* [Overview](final/overview)
+* [Practice Test](final/practiceTest)
 
 ### Resources
 * [Style Guide](resources/styleGuide.md)
