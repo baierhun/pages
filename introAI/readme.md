@@ -41,3 +41,5 @@
 
 ### Final Project
 * [Part I](final/partI)
+* [Part II](final/partII)
+* [Final Project Assignment](final/project)
