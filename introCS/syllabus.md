@@ -50,7 +50,7 @@ How does one go from being a consumer of technology to a creator of it? Intro to
 ---
 ### **Graded Assignments**
 
-All work must be submitted by the time specified on the assignment. Work submitted after this time will be considered late. Late assignments will not be eligible for full credit. Please see the student handbook regarding how late/missing assignments are graded.
+All work must be submitted by the time specified on the assignment. Work submitted after this time will be considered late. Late assignments will not be eligible for full credit. Extensions are only granted in extraordinary circumstances in conjunction with school administration. Please see the student handbook regarding how late/missing assignments are graded.
 
 From the student handbook: 
 
