@@ -1,4 +1,4 @@
-# **Intro to Artificial Intelligence**
+# **Engineering Smart Solutions**
 ---
 ## The Hun School of Princeton
 ---
@@ -13,15 +13,14 @@ Office: Chesebro 128a
 (609) 921-7600, ext. 3412 
 
 ---
-Introduction to Artificial Intelligence is a trimester course in which students will discover what artificial intelligence (AI) is, how it is currently used, and how it could be used in the future. They will be introduced to machine learning, deep learning, and neural networks and how they already make decisions in daily life. Students will be taught the history of AI, how it is used today, and delve into the future of AI and its many possible applications while exploring issues and concerns surrounding AI. Students will experiment with numerous AI applications, and do some basic programming of an artificially intelligent system.   
+Internet-connected devices are fundamentally changing our lives and the world around us. In this course, students will study the “things” that make up the Internet of Things. They will explore how each is connected to one another, how the IoT communicates, and how data is stored and secured. Students will design and build their own prototypes using sensors and actuating technology and practice IoT programming using microcomputers such as Arduino or Raspberry Pi.
 
 ## **Units of Study** 
 ---
 
->**What is AI?**  
->**How Does AI Work?**  
->**AI in Practice**  
->**The Many Sides of AI**  
+>**Hardware**  
+>**Software**  
+>**The Internet**  
 
 ## **Materials & Supplies** 
 ---

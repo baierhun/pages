@@ -1,4 +1,4 @@
-# **Intro to Artificial Intelligence**
+# **Advanced Placement Computer Science A**
 ---
 ## The Hun School of Princeton
 ---
@@ -13,15 +13,20 @@ Office: Chesebro 128a
 (609) 921-7600, ext. 3412 
 
 ---
-Introduction to Artificial Intelligence is a trimester course in which students will discover what artificial intelligence (AI) is, how it is currently used, and how it could be used in the future. They will be introduced to machine learning, deep learning, and neural networks and how they already make decisions in daily life. Students will be taught the history of AI, how it is used today, and delve into the future of AI and its many possible applications while exploring issues and concerns surrounding AI. Students will experiment with numerous AI applications, and do some basic programming of an artificially intelligent system.   
+AP Computer Science A is an introduction to Java programming that allows qualified students the possibility of earning university credit for an introductory computer science class. Students will learn logic, syntax, methods, and data structures and develop functional, readable, and reusable computer programs that solve specific problems effectively and efficiently. Students will analyze algorithms and participate in pair-programming activities that facilitate an appreciation for the best programming practices and ethical computing behaviors that underpin computer science. Students who take this college-level course are required to take the AP exam in May.
 
 ## **Units of Study** 
 ---
 
->**What is AI?**  
->**How Does AI Work?**  
->**AI in Practice**  
->**The Many Sides of AI**  
+>**Data**  
+>**Complex Data Types**  
+>**Methods**  
+>**Conditionals/Logic**  
+>**Arrays**  
+>**Loops**  
+>**Advanced Arrays**  
+>**Algorithms**  
+>**Advanced Objects**
 
 ## **Materials & Supplies** 
 ---
