@@ -137,3 +137,49 @@ pre code {
   height: calc(var(--scale) * 1rem);
   width: 100%;
 }
+
+/* worksheet title */
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 8px;
+  margin-bottom: 16px;
+}
+
+.title h1 {
+  margin: 0;
+  font-size: 1.8em;
+}
+
+/* Hides the name field by default */
+.title > div {
+  font-size: 1.1em;
+  align-items: center;
+}
+
+.title span {
+  display: inline-block;
+  width: 200px;
+  border-bottom: 1px solid #000;
+}
+
+.print-on {
+  display: none;
+}
+
+@media print {
+  /* Shows the print-on class only when printing */
+  .print-on {
+    display: flex !important;
+  }
+
+  /* Hides the print-off class when printing */
+  .print-off {
+    display: none !important;
+  }
+}
+
+/* worksheet title end */
