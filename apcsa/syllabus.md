@@ -37,7 +37,7 @@ AP Computer Science A is an introduction to Java programming that allows qualifi
 ## **Class Policies**
 
 ### **Grades**
-Your final grade combines the average of all course units alongside your final exam or project. Each unit is weighted equally and reflects your performance on assignments, tests, and class conduct.
+Grades are calculated using a **points-based system**. Each assignment, quiz, project, and test, along with your class conduct, is worth a set number of points, and your grade is based on the total number of points you earn compared with the total points possible. Larger assignments are worth more points and therefore have a greater impact on your overall grade. Your final exam or project gets averaged in after your course grade is calculated.
 
 Grades will be rounded to one decimal place. Final marking period grades are rounded to the nearest whole number from the average.
 
@@ -131,16 +131,18 @@ Outside the academic day I can be reached via email. Response times will vary de
 
 ---
 
-<div hidden style="border: 2px solid #000; padding: 14px; margin-top: 24px; border-radius: 4px; font-family: sans-serif;">
-  <h3 style="margin-top: 3px; margin-bottom: 0; font-size: 1.2em; text-transform: uppercase; letter-spacing: 0.5px;">Student Acknowledgment & Agreement</h3>
-  <p style="font-size: 0.95em; line-height: 1.5; margin-bottom: 25px;">
-    By signing below, I acknowledge that I have read, understood, and agreed to abide by all the rules, policies, and grading expectations outlined in this syllabus.
-  </p>
-  <div style="margin-bottom: 20px;">
+<div class="print-on" style="flex-direction: column; gap: 20px; border: 2px solid #000; padding: 14px; margin-top: 24px; border-radius: 4px; font-family: sans-serif;">
+  <div>
+    <h3 style="margin-top: 3px; margin-bottom: 0; font-size: 1.2em; text-transform: uppercase; letter-spacing: 0.5px;">Student Acknowledgment &amp; Agreement</h3>
+    <p style="font-size: 0.95em; line-height: 1.5; margin: 8px 0 0;">
+      By signing below, I acknowledge that I have read, understood, and agreed to abide by all the rules, policies, and grading expectations outlined in this syllabus.
+    </p>
+  </div>
+  <div>
     <span style="font-weight: bold; display: inline-block; width: 160px;">Student Name (Print):</span>
     <span style="border-bottom: 1px solid #000; display: inline-block; width: calc(100% - 170px); height: 18px;"></span>
   </div>
-  <div style="margin-bottom: 20px;">
+  <div>
     <span style="font-weight: bold; display: inline-block; width: 160px;">Student Signature:</span>
     <span style="border-bottom: 1px solid #000; display: inline-block; width: calc(100% - 170px); height: 18px;"></span>
   </div>
@@ -149,5 +151,3 @@ Outside the academic day I can be reached via email. Response times will vary de
     <span style="border-bottom: 1px solid #000; display: inline-block; width: calc(100% - 170px); height: 18px;"></span>
   </div>
 </div>
-
----
