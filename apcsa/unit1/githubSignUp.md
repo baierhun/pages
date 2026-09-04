@@ -8,9 +8,9 @@ You will need a GitHub account and proof that you are currently a student.
 
 ## Step 1: Create a GitHub Account
 
-If you don't already have a GitHub account, go to:
+To sign up for a GitHub account, go to:
 
-[github.com](https://github.com?utm_source=chatgpt.com)
+[github.com](https://github.com)
 
 Click **Sign up** and create a free account.
 
@@ -18,10 +18,10 @@ Click **Sign up** and create a free account.
 
 * Use your **real name** on your account.
 * Choose a professional username. This will be visible to others.
-* Use an email address that you can access.
+* Use you school email address. You can add a personal email as a backup
 * **Never share your GitHub password with anyone.**
 
-If you already have a GitHub account, **do not create another one**. Use your existing account.
+If you already have a GitHub account, **you still need one with your hun email address**.
 
 ---
 
@@ -29,7 +29,8 @@ If you already have a GitHub account, **do not create another one**. Use your ex
 
 Go to:
 
-[GitHub Education Student Benefits](https://github.com/settings/education/benefits?utm_source=chatgpt.com)
+[GitHub Education Student Benefits](https://github.com/settings/education/benefits)  
+https://github.com/settings/education/benefits
 
 Under **GitHub Education**, click **Start an application**.
 
@@ -58,7 +59,7 @@ Your documentation needs to clearly show that you are **currently enrolled as a 
 
 ### If GitHub asks for a school email
 
-Add your school email address to your GitHub account and verify it before continuing with your application.
+Add your school email address to your GitHub account and verify it before continuing with your application (you should already have this done, but double check it).
 
 ---
 
@@ -72,13 +73,13 @@ If GitHub asks you for additional information, follow the instructions provided.
 
 ---
 
-# Step 5: Activate GitHub Copilot
+## Step 5: Activate GitHub Copilot
 
 Once your student application has been approved, you need to activate your Copilot benefit.
 
 Go back to:
 
-[GitHub Education Benefits](https://github.com/settings/education/benefits?utm_source=chatgpt.com)
+[GitHub Education Benefits](https://github.com/settings/education/benefits)
 
 Under **Free GitHub developer resources for students and teachers**, click **Learn more**.
 
@@ -94,7 +95,7 @@ Verified students receive **free GitHub Copilot**, including premium features. T
 
 ---
 
-# Step 6: Check Your GitHub Benefits
+## Step 6: Check Your GitHub Benefits
 
 Once everything is approved, you can return to your GitHub Education benefits page to see the tools available to you.
 

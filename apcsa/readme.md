@@ -4,6 +4,8 @@
 [Syllabus](syllabus)
 
 ### Unit 1
+* [Summer Assignment](unit1/summerAssignment)
+* [Github Signup](unit1/githubSignUp)
 * [Problem Set](unit1/problemSet)
 
 
