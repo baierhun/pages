@@ -74,7 +74,9 @@ Each team is responsible for:
 * Preparing rebuttals
 * Dividing speaking responsibilities among team members
 
-**Every student must speak during the debate.**
+**Every student must present at least one section of the debate.**
+
+**Computers are _not_ allowed during the debate**
 
 ---
 
@@ -132,7 +134,7 @@ Respond directly to the opposing team's arguments.
 
 **10 minutes total**
 
-The teacher will ask questions to both teams.
+Teams ask questions of the other team. One person from each team will be asking and answering questions without help from their teammates. Each side will alternate asking/answering one question each.
 
 **Instructions for Teams:**
 
