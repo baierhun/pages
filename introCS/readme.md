@@ -4,9 +4,10 @@
 [Syllabus](syllabus)
 
 ### Mini Module
-* [Computer Ethics](miniModule/computerEthics)
-* [Cyber Safety](miniModule/cyberSafety)
-* [Final Projects](miniModule/finalProjects)
+* [Computer Ethics](unit0/computerEthics)
+* [Cyber Safety](unit0/cyberSafetyNotes)
+* [Ethics Scenarios](unit0/ethicsScenarios.md)
+* [Final Projects](unit0/finalProjects)
 
 ### Unit 1
 * [Signup](unit1/signup)
