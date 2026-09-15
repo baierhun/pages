@@ -144,14 +144,18 @@ pre code {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 24px;
   border-bottom: 2px solid #ccc;
   padding-bottom: 8px;
   margin-bottom: 16px;
+  flex-wrap: wrap; /* lets long titles wrap to a second line instead of squeezing */
 }
 
 .title h1 {
   margin: 0;
   font-size: 1.8em;
+  flex: 1 1 auto;
+  min-width: 0; /* allows the title to shrink/wrap instead of overflowing */
 }
 
 /* Hides the name field by default */
@@ -168,6 +172,43 @@ pre code {
 
 .print-on {
   display: none;
+}
+
+.mcq-choices {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 8px;
+}
+
+.mcq-choices td {
+  width: 50%;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  vertical-align: middle;
+}
+
+/* Inline code */
+.answer-code {
+  font-family: monospace;
+  background: #f4f4f4;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 2px 5px;
+  font-size: 0.95em;
+}
+
+/* Code blocks */
+.answer-code-block {
+  font-family: monospace;
+  background: #f4f4f4;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 12px 15px;
+  padding-bottom: 0px;
+  margin: 10px 0;
+  white-space: pre-wrap;
+  overflow-x: auto;
 }
 
 @media print {
