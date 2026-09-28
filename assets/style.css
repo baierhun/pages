@@ -1,3 +1,9 @@
+:root {
+  color-scheme: light only;
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
 .break {
   page-break-after: always;
 }
@@ -123,7 +129,7 @@ pre code {
         line-height: 1.2 !important;
     }
 
-    /* Ensure blockquotes don't stay huge */
+    /* Ensure block quotes don't stay huge */
     blockquote p {
         font-size: 11pt !important;
     }
@@ -209,6 +215,14 @@ pre code {
   margin: 10px 0;
   white-space: pre-wrap;
   overflow-x: auto;
+}
+
+.test-image {
+  display: block;
+  max-width: 350px;
+  width: 100%;
+  height: auto;
+  margin: 1rem 0;
 }
 
 @media print {

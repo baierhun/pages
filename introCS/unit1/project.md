@@ -84,7 +84,7 @@ Think about what would make someone want to play your game.
 
 2. Submit your **CT Reflection on Canvas**.
 
-   * If you're on a tablet, click the red button below to open the external tool.
-   * If you're in a web browser, you will see a button below these instructions.
-   * Click that button to open the Google Doc.
-   * When finished, return and click **Submit**.
+   * Make a copy of <a href="https://docs.google.com/document/d/1_Q6T6HAwUmbYMSTCZNkeZWMOQt6LhV2Ak0CXXY518Bk/edit?usp=sharing" target="_blank">this google doc</a>
+   * Fill out the document
+   * Save it as a pdf
+   * Submit the pdf here for this assignment
