@@ -2,6 +2,7 @@
 [back](../)
 
 [Syllabus](syllabus)
+[AP Quick Reference](./apReferenceSheet)
 
 ### Unit 1
 * [Summer Assignment](unit1/summerAssignment)
@@ -14,6 +15,8 @@
 
 
 ### Unit 3
+* [Problem Set](unit3/problemSet)
+* [Study Guide](unit3/studyGuide)
 
 
 ### Unit 4
