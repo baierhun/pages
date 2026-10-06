@@ -9,7 +9,7 @@ We will use Google's Gemini as the AI for this assignment.
 
 * Go to [gemini.google.com](https://gemini.google.com)
 * Make sure to sign in with your Google account
-* At the prompt, in the bottom right you will see a dropdown that may say `Fast` or `Thinking`. Make sure `Thinking` is selected.
+* At the prompt, in the bottom right you will see a dropdown that may say `Flash` or `Thinking`. Make sure `Thinking` is selected.
 
 ### Step 1. Create Github Account
 Paste this into the AI:
@@ -78,6 +78,8 @@ Paste this into the AI:
 
 ---
 
+<div class="break"></div>
+
 ### Step 6. Style My Webpage
 Paste this into the AI:
 
@@ -86,8 +88,6 @@ Paste this into the AI:
 > Keep it beginner-friendly and explain what each part of the code does.
 
 ---
-
-<div class="break"></div>
 
 ### Step 7. Add an Image
 Paste this into the AI:
@@ -117,6 +117,8 @@ Paste this into the AI:
 
 ---
 
+<div class="break"></div>
+
 ### Step 9. Clean Up
 Paste this into the AI:
 
@@ -134,3 +136,7 @@ Paste this into the AI:
 
 ### Step 10. Submit
 Copy the link to your webpage and submit it to Canvas.
+
+Paste this into the AI:
+
+> My teacher wants me to submit a link to my webpage. Where can I find that?
