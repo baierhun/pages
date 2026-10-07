@@ -1,12 +1,58 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="UTF-8">
   <title>{{ page.title }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@5.5.1/github-markdown-light.css">
+  <meta name="color-scheme" content="light">
 </head>
+
 <body style="font-family: Arial, sans-serif; max-width: 900px; margin: auto;">
   {{ content }}
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dompurify/dist/purify.min.js"></script>
+  <script>
+    document.querySelectorAll("[data-readme]").forEach(el => {
+      const repo = el.dataset.readme;        // owner/name
+      const file = el.dataset.file || "";    // optional path, e.g. docs/lesson1.md
+      const branch = el.dataset.branch || ""; // optional branch name
+      el.classList.add("markdown-body");
+      el.textContent = "Loading…";
+
+      const encoded = file.split("/").map(encodeURIComponent).join("/");
+      const base = file
+        ? `https://api.github.com/repos/${repo}/contents/${encoded}`
+        : `https://api.github.com/repos/${repo}/readme`;
+      const url = branch ? `${base}?ref=${encodeURIComponent(branch)}` : base;
+
+      // Folder the file lives in, so relative images and links resolve correctly
+      const dir = file.includes("/") ? file.slice(0, file.lastIndexOf("/") + 1) : "";
+      const refPath = branch ? branch.split("/").map(encodeURIComponent).join("/") : "HEAD";
+
+      fetch(url, { headers: { Accept: "application/vnd.github.raw+json" } })
+        .then(r => { if (!r.ok) throw new Error(r.status); return r.text(); })
+        .then(md => {
+          el.innerHTML = DOMPurify.sanitize(marked.parse(md));
+
+          const rawBase = `https://raw.githubusercontent.com/${repo}/${refPath}/${dir}`;
+          const blobBase = `https://github.com/${repo}/blob/${refPath}/${dir}`;
+          const isRelative = u => u && !/^([a-z]+:|#|\/\/)/i.test(u);
+          el.querySelectorAll("img").forEach(i => {
+            const s = i.getAttribute("src");
+            if (isRelative(s)) i.src = new URL(s, rawBase).href;
+          });
+          el.querySelectorAll("a").forEach(a => {
+            const h = a.getAttribute("href");
+            if (isRelative(h)) a.href = new URL(h, blobBase).href;
+          });
+        })
+        .catch(e => { el.textContent = "Couldn't load file (" + e.message + ")."; });
+    });
+  </script>
 </body>
+
 </html>
