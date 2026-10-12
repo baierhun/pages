@@ -1,5 +1,21 @@
 # Unit 1: Drawing with Shapes, Colors, and Labels
 
+## ✅ Submission Requirements
+
+1. Write your code in **CS Academy 1.6 Creative Task 1**.
+   You can use CT2 and the sandbox area as practice if needed.
+   Be sure to submit your code on CS Academy when complete.
+
+   > **Important:** Once you submit the code, it will be locked until it is graded.
+   > You will not be able to edit code after submission, so do not submit until you are ready.
+
+2. Submit your **CT Reflection on Canvas**.
+
+   * Make a copy of <a href="https://docs.google.com/document/d/1_Q6T6HAwUmbYMSTCZNkeZWMOQt6LhV2Ak0CXXY518Bk/edit?usp=sharing" target="_blank">this google doc</a>
+   * Fill out the document
+   * Save it as a pdf
+   * Submit the pdf here for this assignment
+
 ### CREATIVE TASK
 
 In this Creative Task, you will create a **poster advertisement for your final game project** using shapes, colors, and labels.
@@ -22,6 +38,8 @@ Your poster must include, **at minimum**:
 * 1 gradient property
 * 1 opacity property
 * Comments, groupings, and line breaks to organize your code
+
+You may **only use** circles, stars, rectangles, ovals, lines, and labels. No other shapes are allowed.
 
 Your implementation of the requirements must be coherent, relevant, meaningful, and add to your poster. For example, changing a shape's opacity to 99 just to fulfill the requirement will **not** count as fulfilling the requirement.
 
@@ -70,21 +88,3 @@ Think about what would make someone want to play your game.
   <li><a href="https://academy.cs.cmu.edu/docs#line" target="_blank" rel="noopener noreferrer">Lines</a></li>
   <li><a href="https://academy.cs.cmu.edu/docs#label" target="_blank" rel="noopener noreferrer">Labels</a></li>
 </ul>
-
----
-
-## ✅ Submission Requirements
-
-1. Write your code in **CS Academy 1.6 Creative Task 1**.
-   You can use CT2 and the sandbox area as practice if needed.
-   Be sure to submit your code on CS Academy when complete.
-
-   > **Important:** Once you submit the code, it will be locked until it is graded.
-   > You will not be able to edit code after submission, so do not submit until you are ready.
-
-2. Submit your **CT Reflection on Canvas**.
-
-   * Make a copy of <a href="https://docs.google.com/document/d/1_Q6T6HAwUmbYMSTCZNkeZWMOQt6LhV2Ak0CXXY518Bk/edit?usp=sharing" target="_blank">this google doc</a>
-   * Fill out the document
-   * Save it as a pdf
-   * Submit the pdf here for this assignment

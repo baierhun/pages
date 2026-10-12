@@ -6,6 +6,20 @@ In this Collaborative Task, you will work with a partner to create an animation.
 
 ---
 
+## ✅ Submission Requirements
+
+1. Write your code in **CS Academy 2.5 Collaborative Task**
+
+   * Submit your code on CS Academy when complete
+   * ⚠️ Once submitted, your code will be **locked** and cannot be edited
+
+2. Submit your **CT Reflection on Canvas**.
+   * Each partner must submit their **own reflection**
+   * Make a copy of <a href="https://docs.google.com/document/d/1u57Mi8JuP-hJuwyBHzO8BDUcHbShmB5BnjtH6vgulu8/edit?usp=sharing" target="_blank">this google doc</a>
+   * Fill out the document
+   * Save it as a pdf
+   * Submit the pdf here for this assignment
+
 ## 📋 Project Requirements
 
 Work in pairs to create an animation. You can use mouse events and the `onStep` event handler to move your objects.
@@ -67,20 +81,8 @@ A significant number of points will be deducted if you do not meet these:
 
 ---
 
-
 <p align="center">
-  <img src="../assets/unit2Properties.png" alt="Reference image">
+  <img src="../assets/unit2Properties.png" alt="Reference image" style="width:100%;">
 </p>
 
 ---
-
-## ✅ Submission Requirements
-
-1. Write your code in **CS Academy 2.5 Collaborative Task**
-
-   * Submit your code on CS Academy when complete
-   * ⚠️ Once submitted, your code will be **locked** and cannot be edited
-
-2. Submit your **CT Reflection on Canvas**
-
-   * Each partner must submit their **own reflection**
