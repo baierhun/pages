@@ -193,17 +193,19 @@ Customize your site:
 
 ---
 
+<div class="break"></div>
+
 ## 📦 Final Requirements
 
 Your website must include:
 
-✅ An **external JavaScript file (`script.js`)**
-✅ A properly linked `<script src="script.js"></script>`
-✅ At least **1 button with a click event**
-✅ At least **1 change to the page (text, color, etc.)**
-✅ At least **1 user input feature**
-✅ At least **1 if/else decision**
-✅ At least **1 fun/dynamic feature**
+✅ An **external JavaScript file (`script.js`)**  
+✅ A properly linked `<script src="script.js"></script>`  
+✅ At least **1 button with a click event**  
+✅ At least **1 change to the page (text, color, etc.)**  
+✅ At least **1 user input feature**  
+✅ At least **1 if/else decision**  
+✅ At least **1 fun/dynamic feature**  
 
 ---
 

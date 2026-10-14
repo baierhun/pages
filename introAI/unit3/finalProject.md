@@ -1,5 +1,20 @@
 # 🟢 **Final Project: Build Your Own Website**
 
+## 📤 **Submission**
+
+Submit:
+
+* A **link to your repository**
+* The link should look something like this:
+
+  ```
+  https://github.com/mrBaier/MyWebPage
+  ```
+
+Your links must:
+* Open correctly
+* Include all required pages and features
+
 ## 🌐 **Project Overview**
 
 You will create a **brand new website** using:
@@ -78,7 +93,7 @@ Your website must include a **menu bar on every page** that:
 
 ### 🎨 **CSS (Styling)**
 
-You must use CSS to style your website. Include:
+You must use CSS to style your website. It needs to be in its own `.css` file and include:
 
 * A background color or image
 * Text styling (font and color)
@@ -89,7 +104,7 @@ You must use CSS to style your website. Include:
 
 ### ⚡ **JavaScript (Interactivity)**
 
-Include at least **2 interactive features**, such as:
+In a separate `.js` file, include at least **2 interactive features**, such as:
 
 * A button that changes text or content
 * A color/theme change
@@ -120,15 +135,3 @@ You may use AI to help, but you should:
 7. Test your website
 
 ---
-
-## 📤 **Submission**
-
-Submit:
-
-* A **link to your repository**
-* A **working link to your website**
-
-Your links must:
-
-* Open correctly
-* Include all required pages and features
