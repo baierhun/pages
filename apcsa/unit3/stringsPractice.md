@@ -105,8 +105,6 @@ Check the password for the following:
 * The password contains `"!"`.
 * The password is not exactly `"password"`.
 
-Store each result in a variable. Then create a final `boolean` variable that determines whether the password passes all of the requirements.
-
 ---
 
 ### 🕵️ 7. Hidden Message
@@ -186,29 +184,3 @@ String movie2 = "Avengers";
 ---
 
 <div class="break"></div>
-
-### 🔓 11. Final Lock
-
-Create a program using:
-
-```java
-String clue = "TREASURE:DRAGON:CAVE";
-```
-
-Use String methods to extract:
-
-* `"TREASURE"`
-* `"DRAGON"`
-* `"CAVE"`
-
-Then create three variables containing a player's answers.
-
-Determine whether **all three answers are correct**.
-
-Finally, change the clue to:
-
-```java
-String clue = "CASTLE:WIZARD:FOREST";
-```
-
-Your program should still work without changing the code that finds the different pieces.
