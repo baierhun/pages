@@ -1,289 +1,407 @@
-# **Unit 3 Practice Test**
+<div class="title">
+  <h1>Intro to CS — Unit 3 Practice Test</h1>
+</div>
 
-### **1.**
+## Part I — Free Response
 
-Which condition correctly checks if the mouse is in the **top half** of the canvas? **(1 point)**
-
-* A. `mouseY < 200`
-* B. `mouseY > 200`
-* C. `mouseX < 200`
-* D. `mouseX > 200`
-
----
-
-### **2.**
-
-Which event handler correctly runs when a key is pressed? **(1 point)**
-
-* A. `onKey()`
-* B. `onKeyPress(key)`
-* C. `onPressKey()`
-* D. `keyPress()`
-
----
-
-### **3.**
-
-What does this code check?
+For Questions 1–4, assume these shapes already exist:
 
 ```python
-if circle.hits(mouseX, mouseY):
+ball = Circle(200, 200, 20, fill='blue')
+target = Rect(300, 150, 50, 100, fill='gold')
 ```
 
-* A. If the mouse is inside the circle
-* B. If the circle touches another shape
-* C. If two shapes overlap
-* D. If the mouse is outside the canvas
+##### 1. Mouse Position
 
----
+Write an `onMousePress` function that changes the ball’s fill to green if the click is above the middle of the canvas. Otherwise, change its fill to purple.
 
-### **4.**
+<div style="height: 2in;"></div>
 
-What does this code check?
+##### 2. Key Events
 
-```python
-if ball.hitsShape(rect):
-```
+Write an `onKeyPress` function that:
 
-* A. If the mouse touches the ball
-* B. If the ball touches the rectangle
-* C. If the rectangle is inside the ball
-* D. If the ball is inside the mouse
-
----
+- Moves the ball 10 pixels right when the right arrow is pressed.
+- Moves the ball 10 pixels left when the left arrow is pressed.
+- Does nothing when any other key is pressed.
 
 <div class="break"></div>
 
+##### 3. Clicking a Shape
 
-### **5.**
+Write an `onMousePress` function that increases the ball’s radius by 5 only if the click hits the ball.
 
-What happens when the key `"space"` is pressed?
+<div style="height: 1.5in;"></div>
+
+##### 4. Checking for Contact
+
+Write an `onKeyPress` function that does the following when the right arrow is pressed:
+
+1. Moves the ball 10 pixels right.
+2. Checks whether the ball touches the target.
+3. Changes the target’s fill to red if they touch, or gold otherwise.
+
+<div style="height: 2in;"></div>
+
+##### 5. Fix the Syntax
+
+Rewrite the following code so it runs correctly.
 
 ```python
 def onKeyPress(key):
-    if key == "space":
-        ball.fill = "red"
+    if key = 'up'
+        ball.centerY -= 10
+    else
+        ball.centerY += 10
 ```
-
-* A. The ball turns red
-* B. The ball turns red then back to black on release
-* C. The program crashes
-* D. Nothing happens
-
----
-
-### **6.**
-
-What shapes are drawn when the mouse is clicked at (250, 250)? **(1 point)**
-
-```python
-def onMousePress(mouseX, mouseY):
-    if mouseX > 200:
-        Circle(mouseX, mouseY, 80, fill='blue')
-    if mouseY > 200:
-        Circle(mouseX, mouseY, 40, fill='green')
-    else:
-        Circle(mouseX, mouseY, 40, fill='red')
-```
-
-* A. Blue and green circles
-* B. Blue and red circles
-* C. Only a blue circle
-* D. Only a green circle
-
----
-
-### **7.**
-
-Which program correctly moves a ball to the right every step? **(1 point)**
-<table class="answer-table">
-<tr>
-<td>
-A.
-
-```python
-ball.centerX = ball.centerX - 5
-```
-</td><td>
-B.
-
-```python
-ball.centerX += 5
-```
-</td></tr><tr><td>
-C.
-
-```python
-ball.centerY += 5
-```
-</td><td>
-D.
-
-```python
-ball.speed = ball.speed - 5
-```
-</tr></td></table>
-
----
-
-### **8.**
-
-What is wrong with this code? **(1 point)**
-
-```python
-def onStep()
-    ball.centerY += 5
-```
-
-* A. Missing colon after event handler definition
-* B. Missing parentheses in event handler name
-* C. Missing `onMousePress`
-* D. Nothing is wrong
-
----
-
-### **9.**
-
-When does this circle turn green?
-
-```python
-def onMousePress(mouseX, mouseY):
-    if mouseX < 150:
-        c.fill = "green"
-```
-
-* A. When mouseX is less than 150
-* B. When mouseX is greater than 150
-* C. Always
-* D. Never
-
----
-
-### **10.**
-
-What happens after 2 steps?
-
-```python
-ball = Circle(100, 100, 20)
-ball.dx = 10
-
-def onStep():
-    ball.centerX += ball.dx
-```
-
-* A. Ball moves right to 120
-* B. Ball moves right to 110
-* C. Ball moves left to 120
-* D. Ball moves up to 110
-
----
 
 <div class="break"></div>
 
-### **11.**
+##### 6. Fix the Indentation
 
-What will happen after 4 mouse clicks at (100, 100)?
+The programmer wants the ball to turn red only when the user clicks in the left half of the canvas. Rewrite the code correctly.
 
 ```python
 def onMousePress(mouseX, mouseY):
     if mouseX < 200:
-        c.fill = "red"
-    else:
-        c.fill = "blue"
+    ball.fill = 'red'
 ```
 
-* A. The circle alternates red and blue every click
-* B. The circle is always red
-* C. The circle is always blue
-* D. The circle never changes color
+<div style="height: 1.25in;"></div>
 
----
+##### 7. Fix the Logic
 
-### **12.**
+The programmer wants exactly one circle drawn per click:
 
-Which statement is TRUE about this code?
+- A red circle if the click is left of `x = 200`.
+- A blue circle otherwise.
+
+Explain the problem and rewrite the code.
 
 ```python
-if rect.hits(ball.centerX, ball.centerY):
-    rect.fill = "green"
+def onMousePress(mouseX, mouseY):
+    if mouseX < 200:
+        Circle(mouseX, mouseY, 20, fill='red')
+    Circle(mouseX, mouseY, 20, fill='blue')
 ```
 
-* A. It checks if the rectangle touches the ball shape
-* B. It checks if the ball's center is touching any part of rect
-* C. It only works if both shapes are circles
-* D. It checks if two shapes are identical
+<div style="height: 1.75in;"></div>
 
----
+##### 8. Fix the Method
 
-### **13.**
+The programmer wants to check whether two shapes touch. Rewrite the code using the correct method.
 
-What happens when the spacebar is pressed 3 times?
+```python
+if ball.hits(target):
+    ball.fill = 'green'
+```
+
+<div class="break"></div>
+
+## Part II — Multiple Choice
+
+**Directions:** Select the best answer for each question.
+
+##### 9. Which condition evaluates to `True`?
+
+```python
+traingle = Star(100, 200, 30, 3)
+triangle.speedX = 200
+triangle.speedY = 75
+```
+
+<table class="mcq-choices">
+  <tr>
+    <td><strong>A.</strong> <span class="answer-code">triangle.speedX &lt; 200</span></td>
+    <td><strong>B.</strong> <span class="answer-code">triangle.speedY != 75</span></td>
+  </tr>
+  <tr>
+    <td><strong>C.</strong> <span class="answer-code">triangle.speedX &lt;= 200</span></td>
+    <td><strong>D.</strong> <span class="answer-code">triangle.speedY &gt;= 100</span></td>
+  </tr>
+</table>
+
+##### 10. What is the difference between `=` and `==`?
+
+<table class="mcq-choices">
+  <tr>
+    <td><strong>A.</strong> <span class="answer-code">=</span> assigns a value; <span class="answer-code">==</span> checks whether two values are equal.</td>
+    <td><strong>B.</strong> <span class="answer-code">=</span> compares values; <span class="answer-code">==</span> assigns a value.</td>
+  </tr>
+  <tr>
+    <td><strong>C.</strong> Both assign values.</td>
+    <td><strong>D.</strong> Both compare values.</td>
+  </tr>
+</table>
+
+##### 11. When does the indented code inside an `if` statement run?
+
+<table class="mcq-choices">
+  <tr>
+    <td><strong>A.</strong> Every time the program starts.</td>
+    <td><strong>B.</strong> Only when the condition is <span class="answer-code">False</span>.</td>
+  </tr>
+  <tr>
+    <td><strong>C.</strong> Only when the user presses a key.</td>
+    <td><strong>D.</strong> When execution reaches the statement and its condition is <span class="answer-code">True</span>.</td>
+  </tr>
+</table>
+
+##### 12. What does `ball.hits(mouseX, mouseY)` check?
+
+<table class="mcq-choices">
+  <tr>
+    <td><strong>A.</strong> Whether the ball touches another shape.</td>
+    <td><strong>B.</strong> Whether the ball makes contact with the point <span class="answer-code">(mouseX, mouseY)</span>.</td>
+  </tr>
+  <tr>
+    <td><strong>C.</strong> Whether the ball is moving.</td>
+    <td><strong>D.</strong> Whether the mouse is on the left half of the canvas.</td>
+  </tr>
+</table>
+
+<div class="break"></div>
+
+##### 13. What shapes are drawn when the user clicks at `(100, 100)`?
+
+```python
+def onMousePress(mouseX, mouseY):
+    if mouseX < 200:
+        Circle(mouseX, mouseY, 20, fill='cyan')
+    if mouseY < 200:
+        Star(mouseX, mouseY, 30, 5, fill='gold')
+```
+
+<table class="mcq-choices">
+  <tr>
+    <td><strong>A.</strong> Only a cyan circle.</td>
+    <td><strong>B.</strong> Only a gold star.</td>
+  </tr>
+  <tr>
+    <td><strong>C.</strong> A cyan circle and a gold star.</td>
+    <td><strong>D.</strong> No shapes.</td>
+  </tr>
+</table>
+
+##### 14. What color is the ball after the user clicks at `(200, 200)`?
+
+```python
+ball = Circle(200, 200, 20, fill='gray')
+
+def onMousePress(mouseX, mouseY):
+    if mouseX < 200:
+        ball.fill = 'red'
+    else:
+        ball.fill = 'blue'
+```
+
+<table class="mcq-choices">
+  <tr>
+    <td><strong>A.</strong> Red.</td>
+    <td><strong>B.</strong> Blue.</td>
+  </tr>
+  <tr>
+    <td><strong>C.</strong> Gray.</td>
+    <td><strong>D.</strong> The code produces an error.</td>
+  </tr>
+</table>
+
+##### 15. What is the ball’s final `centerX` after the user presses right, right, left, and space, in that order?
+
+```python
+ball = Circle(100, 200, 20)
+
+def onKeyPress(key):
+    if key == 'right':
+        ball.centerX += 15
+    if key == 'left':
+        ball.centerX -= 10
+```
+
+<table class="mcq-choices">
+  <tr>
+    <td><strong>A.</strong> <span class="answer-code">120</span></td>
+    <td><strong>B.</strong> <span class="answer-code">130</span></td>
+  </tr>
+  <tr>
+    <td><strong>C.</strong> <span class="answer-code">110</span></td>
+    <td><strong>D.</strong> <span class="answer-code">100</span></td>
+  </tr>
+</table>
+
+##### 16. Before running each version, the ball has a radius of `25` and a fill of `'blue'`. Which statement describes the final results?
+
+**Version A**
+
+```python
+if ball.radius < 30:
+    ball.radius += 10
+if ball.radius >= 30:
+    ball.fill = 'red'
+```
+
+**Version B**
+
+```python
+if ball.radius < 30:
+    ball.radius += 10
+else:
+    ball.fill = 'red'
+```
+
+<table class="mcq-choices">
+  <tr>
+    <td><strong>A.</strong> Both versions end with a radius of 35 and a red fill.</td>
+    <td><strong>B.</strong> Both versions end with a radius of 35 and a blue fill.</td>
+  </tr>
+  <tr>
+    <td><strong>C.</strong> Both end with a radius of 35. Version A is blue; Version B is red.</td>
+    <td><strong>D.</strong> Both end with a radius of 35. Version A is red; Version B is blue.</td>
+  </tr>
+</table>
+
+##### 17. The user clicks at `(125, 125)` and then at `(300, 300)`. What is the button’s fill after the second click?
+
+```python
+button = Rect(100, 100, 100, 50, fill='gray')
+
+def onMousePress(mouseX, mouseY):
+    if button.hits(mouseX, mouseY):
+        button.fill = 'green'
+    else:
+        button.fill = 'gray'
+```
+
+<table class="mcq-choices">
+  <tr>
+    <td><strong>A.</strong> Green.</td>
+    <td><strong>B.</strong> Gray.</td>
+  </tr>
+  <tr>
+    <td><strong>C.</strong> Blue.</td>
+    <td><strong>D.</strong> The button disappears.</td>
+  </tr>
+</table>
+
+<div class="break"></div>
+
+##### 18. What happens when the user presses the up arrow?
 
 ```python
 def onKeyPress(key):
-    if key == "space":
-        ball.centerY -= 10
+    if key == 'space':
+        ball.radius += 5
+    else:
+        ball.radius -= 2
 ```
 
-* A. The ball moves up 10 total
-* B. The ball moves up 30 total
-* C. The ball moves down 30 total
-* D. The ball does not move
+<table class="mcq-choices">
+  <tr>
+    <td><strong>A.</strong> The ball’s radius increases by 5.</td>
+    <td><strong>B.</strong> The ball moves up 2 pixels.</td>
+  </tr>
+  <tr>
+    <td><strong>C.</strong> The ball’s radius decreases by 2.</td>
+    <td><strong>D.</strong> Nothing happens.</td>
+  </tr>
+</table>
 
 ---
 
-<div class="break"></div>
+## Answer Key
 
-### **14.**
-
-Which condition correctly detects if **two shapes are touching each other**?
-
-* A. `shape1.hits(shape2.centerX, shape2.centerY)`
-* B. `shape1.hitsShape(shape2)`
-* C. `shape1.hits(mouseX, mouseY)`
-* D. `shape1.overlaps(mouseX, mouseY)`
-
----
-
-### **15.**
-
-What is the result after 3 steps?
+##### 1. Mouse Position
 
 ```python
-ball = Circle(200, 200, 20)
-ball.dy = 5
-
-def onStep():
-    ball.centerY += ball.dy
-    ball.dy += 1
+def onMousePress(mouseX, mouseY):
+    if mouseY < 200:
+        ball.fill = 'green'
+    else:
+        ball.fill = 'purple'
 ```
 
-* A. The ball moves the same distance each step
-* B. The ball slows down over time
-* C. The ball speeds up over time
-* D. The ball does not move
+##### 2. Key Events
 
----
+```python
+def onKeyPress(key):
+    if key == 'right':
+        ball.centerX += 10
+    if key == 'left':
+        ball.centerX -= 10
+```
+
+##### 3. Clicking a Shape
+
+```python
+def onMousePress(mouseX, mouseY):
+    if ball.hits(mouseX, mouseY):
+        ball.radius += 5
+```
 
 <div class="break"></div>
 
+##### 4. Checking for Contact
 
-# **Answer Key**
+```python
+def onKeyPress(key):
+    if key == 'right':
+        ball.centerX += 10
+        if ball.hitsShape(target):
+            target.fill = 'red'
+        else:
+            target.fill = 'gold'
+```
 
-| Q# | Answer |
-| -- | ------ |
-| 1  | B      |
-| 2  | B      |
-| 3  | A      |
-| 4  | B      |
-| 5  | A      |
-| 6  | A      |
-| 7  | B      |
-| 8  | A      |
-| 9  | A      |
-| 10 | A      |
-| 11 | B      |
-| 12 | B      |
-| 13 | B      |
-| 14 | B      |
-| 15 | C      |
+##### 5. Fix the Syntax
+
+```python
+def onKeyPress(key):
+    if key == 'up':
+        ball.centerY -= 10
+    else:
+        ball.centerY += 10
+```
+
+##### 6. Fix the Indentation
+
+```python
+def onMousePress(mouseX, mouseY):
+    if mouseX < 200:
+        ball.fill = 'red'
+```
+
+##### 7. Fix the Logic
+
+The blue circle is drawn on every click because its line is outside the `if` statement. Clicking on the left draws both circles.
+
+```python
+def onMousePress(mouseX, mouseY):
+    if mouseX < 200:
+        Circle(mouseX, mouseY, 20, fill='red')
+    else:
+        Circle(mouseX, mouseY, 20, fill='blue')
+```
+
+##### 8. Fix the Method
+
+```python
+if ball.hitsShape(target):
+    ball.fill = 'green'
+```
+
+<div class="break"></div>
+
+### Multiple-Choice Answers
+
+| Question | Answer | Explanation |
+|---|---|---|
+| 9 | C | `200 <= 200` is `True`. |
+| 10 | A | `=` assigns; `==` compares. |
+| 11 | D | The condition must be `True` when the statement is reached. |
+| 12 | B | `hits` checks contact with a point. |
+| 13 | C | Both independent conditions are true. |
+| 14 | B | `200 < 200` is false, so the `else` runs. |
+| 15 | A | `100 + 15 + 15 - 10 = 120`. Space has no effect. |
+| 16 | D | Version A checks its second condition after the radius changes. Version B skips the `else`. |
+| 17 | B | The second click misses the button, so the `else` runs. |
+| 18 | C | The up arrow is not space, so the `else` runs. |

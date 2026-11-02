@@ -6,6 +6,20 @@
 
 ---
 
+## ✅ **Submission Requirements**
+
+1. Write your code in **CS Academy 3.6 Creative Task #1**
+
+   * Be sure to submit your code on CS Academy when complete
+   * ⚠️ Once submitted, your code will be **locked** until graded
+
+2. Submit your **CT Reflection on Canvas**.
+
+   * Make a copy of <a href="https://docs.google.com/document/d/1_Q6T6HAwUmbYMSTCZNkeZWMOQt6LhV2Ak0CXXY518Bk/edit?usp=sharing" target="_blank">this google doc</a>
+   * Fill out the document
+   * Save it as a pdf
+   * Submit the pdf here for this assignment
+
 ## 📝 **Project Requirements**
 
 For this cumulative project, you will design a game using concepts learned in Units 1–3. Your project must include, **at minimum**:
@@ -66,16 +80,5 @@ For this cumulative project, you will design a game using concepts learned in Un
 
 * <a href="https://academy.cs.cmu.edu/docs#generalShapeMethods" target="_blank">General Shape Methods</a>
   *(toFront, toBack, contains, containsShape, hits, hitsShape)*
-
----
-
-## ✅ **Submission Requirements**
-
-1. Write your code in **CS Academy 3.6 Creative Task #1**
-
-   * Be sure to submit your code on CS Academy when complete
-   * ⚠️ Once submitted, your code will be **locked** until graded
-
-2. Submit your **CT Reflection on Canvas**
 
 ---
