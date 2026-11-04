@@ -1,4 +1,4 @@
-# Game Name: Boolean Logic Battle
+# Game Name: Boolean Logic in Python
 
 Q:
 ```

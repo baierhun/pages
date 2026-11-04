@@ -197,7 +197,8 @@ const rand = arr => arr[Math.floor(Math.random()*arr.length)];
 const gameFiles = [
     "games/data-types.md",
     "games/boolean-logic.md",
-    "games/loop-practice.md"
+    "games/loop-practice.md",
+    "games/java-boolean-expressions.md"
 ];
 
 let games = {};
