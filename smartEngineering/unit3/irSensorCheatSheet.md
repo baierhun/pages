@@ -21,7 +21,7 @@ const int IR_TX_PIN = 7;
 const int IR_RX_PIN = A0;
 
 void setup() {
-  Serial.begin(9600);
+  Serial.begin(115200);
   analogReadResolution(10);
 
   pinMode(IR_TX_PIN, OUTPUT);

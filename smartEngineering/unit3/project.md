@@ -4,6 +4,7 @@
     </h1>
     <div class="print-on">
         <strong>Name:</strong>&nbsp;<span>&nbsp;</span>
+        <strong>Partner:</strong>&nbsp;<span>&nbsp;</span>
     </div>
 </div>
 

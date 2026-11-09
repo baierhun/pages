@@ -29,5 +29,9 @@ void setup() {
 }
 
 void loop() {
+  matrix.renderBitmap(picture, 8, 12);
+  delay(3000);
+  matrix.clear();
+  delay(3000);
 }
 ```

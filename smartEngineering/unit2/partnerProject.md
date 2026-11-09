@@ -1,11 +1,11 @@
 # Unit 2 Project: Smart Device Challenge
 
 ## Parings
-Jon/Boris - Security Alarm
-Karly/Herschel - Crosswalk
-Chase/Lauryn - Temperature Alarm
-NK/DE - Smart Parking
-Miriam/Anna - Emergency Warning
+* Jon/Boris - Security Alarm
+* Karly/Herschel - Crosswalk
+* Chase/Lauryn - Temperature Alarm
+* NK/DE - Smart Parking
+* Miriam/Anna - Emergency Warning
 
 You and **one partner** will design and build a smart device using an Arduino.
 
