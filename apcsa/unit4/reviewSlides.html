@@ -1,0 +1,1785 @@
+<style>
+    :root {
+        --bg: #f6f4ed;
+        --ink: #142e3b;
+        --muted: #53646d;
+        --teal: #006f70;
+        --line: #d7dcd7;
+        --orange: #d76a36
+    }
+
+    * {
+        box-sizing: border-box
+    }
+
+    body {
+        margin: 0;
+        background: #102630;
+        color: var(--ink);
+        font-family: Arial, Helvetica, sans-serif
+    }
+
+    button,
+    select {
+        font: inherit
+    }
+
+    button {
+        cursor: pointer;
+        border: 1px solid #c8d4d5;
+        border-radius: 7px;
+        padding: 10px 16px;
+        background: #fff;
+        color: var(--ink)
+    }
+
+    button:hover {
+        background: #d9edeb
+    }
+
+    button:focus-visible,
+    a:focus-visible,
+    summary:focus-visible {
+        outline: 3px solid #d76a36;
+        outline-offset: 3px
+    }
+
+    button:disabled {
+        opacity: .4;
+        cursor: default
+    }
+
+    header {
+        height: 58px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 26px;
+        color: #fff;
+        gap: 15px
+    }
+
+    header .brand {
+        font-size: 15px;
+        letter-spacing: .08em
+    }
+
+    header button {
+        padding: 7px 12px;
+        background: transparent;
+        color: #e7f2f1;
+        border-color: #49606a
+    }
+
+    header button:hover {
+        background: #31505c
+    }
+
+    .header-actions {
+        display: flex;
+        gap: 8px
+    }
+
+    #viewport {
+        height: calc(100dvh - 116px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden
+    }
+
+    #stage {
+        width: 1280px;
+        height: 720px;
+        flex-shrink: 0;
+        position: relative;
+        transform-origin: center center
+    }
+
+    .slide {
+        position: absolute;
+        inset: 0;
+        background: var(--bg);
+        padding: 46px 64px 48px;
+        display: none;
+        overflow: hidden;
+        border-top: 8px solid var(--teal)
+    }
+
+    .slide.active {
+        display: block
+    }
+
+    .eyebrow {
+        font-size: 15px;
+        color: var(--teal);
+        text-transform: uppercase;
+        letter-spacing: .13em;
+        font-weight: 700;
+        margin: 0 0 18px
+    }
+
+    h1 {
+        font-size: 43px;
+        line-height: 1.12;
+        letter-spacing: -.025em;
+        margin: 0 0 27px;
+        font-weight: 750
+    }
+
+    h3 {
+        font-size: 25px;
+        margin: 0 0 18px
+    }
+
+    p,
+    li {
+        font-size: 24px;
+        line-height: 1.45
+    }
+
+    p {
+        margin: 0 0 20px
+    }
+
+    ul,
+    ol {
+        padding-left: 29px;
+        margin: 0
+    }
+
+    li {
+        margin-bottom: 16px
+    }
+
+    .columns {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 38px;
+        align-items: start
+    }
+
+    .columns>div {
+        min-width: 0
+    }
+
+    pre {
+        margin: 0 0 20px;
+        padding: 25px;
+        background: #142e3b;
+        color: #f0f8f6;
+        border-radius: 10px;
+        font: 22px/1.5 ui-monospace, SFMono-Regular, Consolas, monospace;
+        white-space: pre-wrap;
+        tab-size: 4
+    }
+
+    code {
+        font-family: ui-monospace, SFMono-Regular, Consolas, monospace
+    }
+
+    p code,
+    li code,
+    td code,
+    .note code {
+        font-size: .92em;
+        color: #005e63
+    }
+
+    pre code {
+        color: inherit
+    }
+
+    .note {
+        border-left: 5px solid var(--orange);
+        background: #ebece3;
+        padding: 15px 20px;
+        font-size: 21px;
+        line-height: 1.4;
+        margin-top: 22px
+    }
+
+    .answer {
+        border: 1px solid #93bcb7;
+        border-radius: 8px;
+        margin-top: 23px;
+        background: #e5f0eb;
+        font-size: 22px;
+        line-height: 1.4
+    }
+
+    .answer summary {
+        cursor: pointer;
+        padding: 12px 18px;
+        font-size: 20px;
+        font-weight: bold;
+        color: #006360
+    }
+
+    .answer>div {
+        padding: 0 20px 16px
+    }
+
+    .answer li {
+        font-size: 22px;
+        margin-bottom: 8px
+    }
+
+    .answer p {
+        font-size: 22px
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 4px 0 18px;
+        font-size: 23px;
+        line-height: 1.35;
+        text-align: left
+    }
+
+    th {
+        background: #deebe6;
+        font-size: 20px;
+        color: #006063;
+        padding: 13px 16px
+    }
+
+    td {
+        padding: 14px 16px;
+        border-bottom: 1px solid var(--line)
+    }
+
+    .slide:after {
+        content: attr(data-number);
+        position: absolute;
+        bottom: 17px;
+        right: 30px;
+        font-size: 15px;
+        color: var(--muted)
+    }
+
+    footer {
+        height: 58px;
+        color: #c9d8db;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 0 26px;
+        font-size: 14px
+    }
+
+    footer button {
+        padding: 7px 16px
+    }
+
+    #progress {
+        flex: 1;
+        height: 4px;
+        border-radius: 10px;
+        background: #3c535e;
+        overflow: hidden
+    }
+
+    #bar {
+        height: 100%;
+        background: #87cec2
+    }
+
+    #position {
+        min-width: 55px;
+        text-align: center
+    }
+
+    #slide-name {
+        max-width: 330px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap
+    }
+
+    .cover {
+        background: #e7eee6
+    }
+
+    .cover h1 {
+        font-size: 90px;
+        max-width: 760px;
+        margin-top: 32px;
+        margin-bottom: 25px
+    }
+
+    .cover .subtitle {
+        font-size: 28px;
+        max-width: 720px
+    }
+
+    .tags {
+        display: flex;
+        gap: 12px;
+        margin-top: 32px
+    }
+
+    .tags span {
+        font-size: 17px;
+        background: #fff;
+        padding: 12px 14px;
+        border-radius: 6px
+    }
+
+    .hero-code {
+        position: absolute;
+        right: 65px;
+        bottom: 118px;
+        font: 30px/1.6 monospace;
+        color: #006f70;
+        transform: rotate(-4deg)
+    }
+
+    .cover .start {
+        position: absolute;
+        bottom: 38px;
+        left: 64px;
+        font-size: 17px;
+        color: #53646d
+    }
+
+    .roadmap {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+        margin: 45px 0
+    }
+
+    .roadmap b {
+        font-size: 60px;
+        color: #8baea2;
+        display: block;
+        margin-bottom: 18px
+    }
+
+    .roadmap p {
+        font-size: 25px
+    }
+
+    .formula {
+        font-family: monospace;
+        font-size: 29px;
+        line-height: 1.5;
+        border-bottom: 1px solid var(--line);
+        padding: 8px 0 20px;
+        margin-bottom: 12px
+    }
+
+    .formula span {
+        font: 18px Arial;
+        color: var(--muted)
+    }
+
+    .trace {
+        background: #e2eae2;
+        border-radius: 10px;
+        padding: 28px;
+        min-height: 300px
+    }
+
+    .trace-head {
+        font-size: 24px;
+        font-weight: bold;
+        color: #006f70
+    }
+
+    .trace-state {
+        font-size: 26px;
+        min-height: 125px;
+        margin-top: 20px
+    }
+
+    .trace-controls {
+        display: flex;
+        gap: 8px
+    }
+
+    .checks li {
+        margin: 24px 0;
+        font-size: 26px
+    }
+
+    .reference p {
+        font-size: 22px
+    }
+
+    a {
+        color: #006b70
+    }
+
+    dialog {
+        border: 0;
+        border-radius: 12px;
+        padding: 25px;
+        max-width: 800px;
+        width: 90vw;
+        background: #f6f4ed;
+        color: var(--ink);
+        max-height: 85dvh
+    }
+
+    dialog::backdrop {
+        background: #071d27d9
+    }
+
+    .dialog-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 18px
+    }
+
+    .dialog-header h2 {
+        margin: 0
+    }
+
+    .topic-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 7px
+    }
+
+    .topic-list button {
+        text-align: left;
+        font-size: 15px;
+        line-height: 1.3;
+        padding: 9px 12px
+    }
+
+    .topic-list small {
+        display: block;
+        color: #53646d;
+        font-size: 11px;
+        margin-bottom: 3px
+    }
+
+    .topic-list .current {
+        background: #d6e9e2;
+        border-color: #006f70
+    }
+
+    body.full header,
+    body.full footer {
+        display: none
+    }
+
+    body.full #viewport {
+        height: 100dvh
+    }
+
+    @media(max-width:650px) {
+        header {
+            padding: 0 12px
+        }
+
+        .brand {
+            display: none
+        }
+
+        footer {
+            padding: 0 12px;
+            gap: 9px
+        }
+
+        #slide-name {
+            display: none
+        }
+
+        .topic-list {
+            grid-template-columns: 1fr
+        }
+
+        .header-actions {
+            width: 100%;
+            justify-content: space-between
+        }
+    }
+
+    @media print {
+        @page {
+            size: 1280px 720px;
+            margin: 0
+        }
+
+        html,
+        body {
+            background: white;
+            width: 100%;
+            height: auto
+        }
+
+        header,
+        footer,
+        dialog {
+            display: none !important
+        }
+
+        #viewport {
+            display: block;
+            height: auto;
+            overflow: visible
+        }
+
+        #stage {
+            width: 1280px;
+            height: auto;
+            transform: none !important
+        }
+
+        .slide {
+            position: relative;
+            display: block !important;
+            width: 1280px;
+            height: 720px;
+            break-after: page;
+            page-break-after: always;
+            print-color-adjust: exact;
+            -webkit-print-color-adjust: exact
+        }
+
+        .answer>div {
+            display: block !important
+        }
+
+        .answer summary {
+            display: none
+        }
+
+        .trace-controls {
+            display: none
+        }
+
+        .slide:last-child {
+            break-after: auto
+        }
+    }
+</style>
+<header><span class="brand">AP COMPUTER SCIENCE A / UNIT 4</span>
+    <div class="header-actions"><button id="topics" type="button">Topics <span
+                aria-hidden="true">[T]</span></button><button id="fullscreen" type="button">Full screen</button><button
+            id="print" type="button">Print / PDF</button></div>
+</header>
+<main id="viewport" aria-label="Slideshow">
+    <div id="stage">
+        <section class="slide cover" data-number="01" data-title="Selection &amp; iteration" aria-label="Slide 1"
+            aria-hidden="true">
+            <div class="eyebrow">Unit 4 review</div>
+            <h1>Selection &amp;<br>iteration</h1>
+            <div class="slide-body">
+                <p class="subtitle">Decisions, repetition, and recursive thinking in Java.</p>
+                <div class="tags"><span>AP Unit 2 · Topics 2.1–2.12</span><span>Recursion · Topic 4.16</span></div>
+                <div class="hero-code">if (ready) {<br>&nbsp;&nbsp;review();<br>}</div>
+                <p class="start">Use ← → to navigate · A reveals answers · T opens topics</p>
+            </div>
+        </section>
+        <section class="slide " data-number="02" data-title="What this unit connects" aria-label="Slide 2"
+            aria-hidden="true">
+            <div class="eyebrow">The roadmap</div>
+            <h1>What this unit connects</h1>
+            <div class="slide-body">
+                <div class="roadmap">
+                    <div><b>01</b>
+                        <h3>Selection</h3>
+                        <p>Boolean expressions determine which statements run.</p>
+                    </div>
+                    <div><b>02</b>
+                        <h3>Iteration</h3>
+                        <p>Loops repeat work while a condition stays true.</p>
+                    </div>
+                    <div><b>03</b>
+                        <h3>Recursion</h3>
+                        <p>A method repeats work through calls to itself.</p>
+                    </div>
+                </div>
+                <div class="note">For any code trace: track the condition, the changing state, and the order of
+                    execution.</div>
+            </div>
+        </section>
+        <section class="slide " data-number="03" data-title="Boolean expressions make decisions" aria-label="Slide 3"
+            aria-hidden="true">
+            <div class="eyebrow">Selection · AP 2.1–2.2</div>
+            <h1>Boolean expressions make decisions</h1>
+            <div class="slide-body">
+                <div class="columns">
+                    <div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Operator</th>
+                                    <th>Meaning</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>==</code> / <code>!=</code></td>
+                                    <td>Equal / not equal</td>
+                                </tr>
+                                <tr>
+                                    <td><code>&lt;</code> / <code>&gt;</code></td>
+                                    <td>Less / greater</td>
+                                </tr>
+                                <tr>
+                                    <td><code>&lt;=</code> / <code>&gt;=</code></td>
+                                    <td>Less / greater or equal</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <pre><code>int score = 82;
+boolean passing = score &gt;= 65;  // true
+boolean perfect = score == 100; // false
+boolean even = score % 2 == 0;  // true</code></pre>
+                        <div class="note">An expression such as <code>score &gt;= 65</code> evaluates to a primitive
+                            <code>boolean</code>: <code>true</code> or <code>false</code>.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="slide " data-number="04" data-title="Equality depends on the type" aria-label="Slide 4"
+            aria-hidden="true">
+            <div class="eyebrow">Selection · AP 2.2</div>
+            <h1>Equality depends on the type</h1>
+            <div class="slide-body">
+                <div class="columns">
+                    <div>
+                        <pre><code>int a = 7;
+int b = 7;
+System.out.println(a == b); // true
+
+String s = new String(&quot;Java&quot;);
+String t = new String(&quot;Java&quot;);
+System.out.println(s == t);      // false
+System.out.println(s.equals(t)); // true</code></pre>
+                    </div>
+                    <div>
+                        <ul>
+                            <li><code>==</code> compares primitive values.</li>
+                            <li>For objects, <code>==</code> compares references: do both refer to the same object?</li>
+                            <li>For Strings, <code>.equals()</code> compares character content.</li>
+                        </ul>
+                        <div class="note">Use <code>== null</code> to test whether a reference is null. Calling a method
+                            on null causes an exception.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="slide " data-number="05" data-title="One decision, several possible paths" aria-label="Slide 5"
+            aria-hidden="true">
+            <div class="eyebrow">Selection · AP 2.3</div>
+            <h1>One decision, several possible paths</h1>
+            <div class="slide-body">
+                <div class="columns">
+                    <div>
+                        <pre><code>if (score &gt;= 90) {
+    grade = &quot;A&quot;;
+} else if (score &gt;= 80) {
+    grade = &quot;B&quot;;
+} else {
+    grade = &quot;Below B&quot;;
+}</code></pre>
+                    </div>
+                    <div>
+                        <ul>
+                            <li>Check conditions from top to bottom.</li>
+                            <li>Run the first matching branch.</li>
+                            <li>Skip the remaining branches in that chain.</li>
+                            <li>The <code>else</code> runs when every earlier condition is false.</li>
+                        </ul>
+                        <div class="note">With overlapping ranges, put the more restrictive test first. Here, 95 must
+                            reach the A branch before the B branch.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="slide " data-number="06" data-title="Separate if statements can both run" aria-label="Slide 6"
+            aria-hidden="true">
+            <div class="eyebrow">Selection · AP 2.3</div>
+            <h1>Separate if statements can both run</h1>
+            <div class="slide-body">
+                <div class="columns">
+                    <div>
+                        <h3>Two independent decisions</h3>
+                        <pre><code>int x = 8;
+if (x &gt; 5) {
+    System.out.print(&quot;A&quot;);
+}
+if (x &gt; 0) {
+    System.out.print(&quot;B&quot;);
+}</code></pre>
+                    </div>
+                    <div>
+                        <h3>One connected decision</h3>
+                        <pre><code>int x = 8;
+if (x &gt; 5) {
+    System.out.print(&quot;A&quot;);
+} else if (x &gt; 0) {
+    System.out.print(&quot;B&quot;);
+}</code></pre>
+                    </div>
+                </div>
+                <details class="answer">
+                    <summary>Reveal answer</summary>
+                    <div><strong>Left:</strong> <code>AB</code>. <strong>Right:</strong> <code>A</code>. The second
+                        condition on the right is skipped.</div>
+                </details>
+            </div>
+        </section>
+        <section class="slide " data-number="07" data-title="Nested decisions depend on outer tests"
+            aria-label="Slide 7" aria-hidden="true">
+            <div class="eyebrow">Selection · AP 2.4</div>
+            <h1>Nested decisions depend on outer tests</h1>
+            <div class="slide-body">
+                <div class="columns">
+                    <div>
+                        <pre><code>if (hasTicket) {
+    if (age &gt;= 13) {
+        System.out.print(&quot;Enter&quot;);
+    } else {
+        System.out.print(&quot;Bring an adult&quot;);
+    }
+} else {
+    System.out.print(&quot;Buy a ticket&quot;);
+}</code></pre>
+                    </div>
+                    <div>
+                        <ul>
+                            <li>The inner decision runs only if <code>hasTicket</code> is true.</li>
+                            <li>Without braces, an <code>else</code> belongs to the nearest unmatched <code>if</code>.
+                            </li>
+                            <li>Braces make the intended grouping clear.</li>
+                        </ul>
+                        <div class="note">Check: what prints when <code>hasTicket</code> is false and <code>age</code>
+                            is 15?</div>
+                    </div>
+                </div>
+                <details class="answer">
+                    <summary>Reveal answer</summary>
+                    <div><code>Buy a ticket</code>. The inner condition is never evaluated.</div>
+                </details>
+            </div>
+        </section>
+        <section class="slide " data-number="08" data-title="AND, OR, and NOT" aria-label="Slide 8" aria-hidden="true">
+            <div class="eyebrow">Boolean logic · AP 2.5</div>
+            <h1>AND, OR, and NOT</h1>
+            <div class="slide-body">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>a</th>
+                            <th>b</th>
+                            <th>a &amp;&amp; b</th>
+                            <th>a || b</th>
+                            <th>!a</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>true</td>
+                            <td>true</td>
+                            <td>true</td>
+                            <td>true</td>
+                            <td>false</td>
+                        </tr>
+                        <tr>
+                            <td>true</td>
+                            <td>false</td>
+                            <td>false</td>
+                            <td>true</td>
+                            <td>false</td>
+                        </tr>
+                        <tr>
+                            <td>false</td>
+                            <td>true</td>
+                            <td>false</td>
+                            <td>true</td>
+                            <td>true</td>
+                        </tr>
+                        <tr>
+                            <td>false</td>
+                            <td>false</td>
+                            <td>false</td>
+                            <td>false</td>
+                            <td>true</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="note"><code>&amp;&amp;</code> needs both sides true. <code>||</code> needs at least one side
+                    true. <code>!</code> reverses one Boolean value.</div>
+                <p>Useful precedence: <code>!</code>, arithmetic, comparisons, <code>&amp;&amp;</code>, then
+                    <code>||</code>. Use parentheses to make grouping explicit.
+                </p>
+            </div>
+        </section>
+        <section class="slide " data-number="09" data-title="Short-circuit evaluation can skip work"
+            aria-label="Slide 9" aria-hidden="true">
+            <div class="eyebrow">Boolean logic · AP 2.5</div>
+            <h1>Short-circuit evaluation can skip work</h1>
+            <div class="slide-body">
+                <div class="columns">
+                    <div>
+                        <pre><code>int count = 0;
+boolean ok = count != 0
+             &amp;&amp; 24 / count &gt; 3;
+// false; division is skipped
+
+String name = null;
+boolean named = name != null
+                &amp;&amp; name.length() &gt; 0;
+// false; length() is skipped</code></pre>
+                    </div>
+                    <div>
+                        <ul>
+                            <li><code>&amp;&amp;</code>: a false left operand determines the result.</li>
+                            <li><code>||</code>: a true left operand determines the result.</li>
+                            <li>Java evaluates from left to right.</li>
+                            <li>Place a safety check before the operation it protects.</li>
+                        </ul>
+                        <div class="note">Reversing the operands in either example attempts the unsafe operation first.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="slide " data-number="10" data-title="De Morgan’s laws negate a group" aria-label="Slide 10"
+            aria-hidden="true">
+            <div class="eyebrow">Boolean logic · AP 2.6</div>
+            <h1>De Morgan’s laws negate a group</h1>
+            <div class="slide-body">
+                <div class="columns">
+                    <div>
+                        <div class="formula">!(a &amp;&amp; b)<br><span>is equivalent to</span><br>!a || !b</div>
+                        <div class="formula">!(a || b)<br><span>is equivalent to</span><br>!a &amp;&amp; !b</div>
+                    </div>
+                    <div>
+                        <pre><code>!(x &gt;= 10 &amp;&amp; x &lt;= 20)
+// equivalent to:
+x &lt; 10 || x &gt; 20
+
+!(ready || done)
+// equivalent to:
+!ready &amp;&amp; !done</code></pre>
+                        <div class="note">Negate each operand and swap AND with OR. Negating <code>&lt;</code> gives
+                            <code>&gt;=</code>; negating <code>==</code> gives <code>!=</code>.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="slide " data-number="11" data-title="Are these expressions equivalent?" aria-label="Slide 11"
+            aria-hidden="true">
+            <div class="eyebrow">Selection check</div>
+            <h1>Are these expressions equivalent?</h1>
+            <div class="slide-body">
+                <pre><code>A: !(x &lt; 4 || x &gt;= 10)
+B: x &gt;= 4 &amp;&amp; x &lt; 10
+C: x &gt; 4 &amp;&amp; x &lt;= 10</code></pre>
+                <p>Which pair is equivalent? Use a boundary value to show why the third expression differs.</p>
+                <details class="answer">
+                    <summary>Reveal answer</summary>
+                    <div><strong>A and B.</strong> De Morgan’s law gives <code>x &gt;= 4 &amp;&amp; x &lt; 10</code>. At
+                        <code>x = 4</code>, A and B are true, but C is false. At <code>x = 10</code>, C is true, but A
+                        and B are false.
+                    </div>
+                </details>
+            </div>
+        </section>
+        <section class="slide " data-number="12" data-title="A while loop checks before each pass" aria-label="Slide 12"
+            aria-hidden="true">
+            <div class="eyebrow">Iteration · AP 2.7</div>
+            <h1>A while loop checks before each pass</h1>
+            <div class="slide-body">
+                <div class="columns">
+                    <div>
+                        <pre><code>int n = 2;              // initialize
+while (n &lt;= 8) {        // test
+    System.out.print(n + &quot; &quot;);
+    n += 3;            // update
+}</code></pre>
+                        <p>What prints? What is <code>n</code> after the loop?</p>
+                    </div>
+                    <div>
+                        <ul>
+                            <li>Initialize before entering the loop.</li>
+                            <li>Test before every iteration, including the first.</li>
+                            <li>Run the body only when the test is true.</li>
+                            <li>Update so the loop can eventually stop.</li>
+                        </ul>
+                        <div class="note">A while loop may execute zero times.</div>
+                    </div>
+                </div>
+                <details class="answer">
+                    <summary>Reveal answer</summary>
+                    <div>Output: <code>2 5 8 </code>. Final <code>n</code>: <code>11</code>. The final check,
+                        <code>11 &lt;= 8</code>, is false.
+                    </div>
+                </details>
+            </div>
+        </section>
+        <section class="slide " data-number="13" data-title="A for loop groups the control steps" aria-label="Slide 13"
+            aria-hidden="true">
+            <div class="eyebrow">Iteration · AP 2.8</div>
+            <h1>A for loop groups the control steps</h1>
+            <div class="slide-body">
+                <pre><code>for (int i = 0; i &lt; 4; i++) {
+    System.out.print(i + &quot; &quot;);
+}</code></pre>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Step</th>
+                            <th>When it runs</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>int i = 0</code></td>
+                            <td>Once, before the first test</td>
+                        </tr>
+                        <tr>
+                            <td><code>i &lt; 4</code></td>
+                            <td>Before each iteration</td>
+                        </tr>
+                        <tr>
+                            <td>Loop body</td>
+                            <td>Whenever the test is true</td>
+                        </tr>
+                        <tr>
+                            <td><code>i++</code></td>
+                            <td>After each completed iteration</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="note">Output: <code>0 1 2 3 </code>. The variable <code>i</code> declared in the header is
+                    out of scope after the loop.</div>
+            </div>
+        </section>
+        <section class="slide " data-number="14" data-title="The same repetition in two forms" aria-label="Slide 14"
+            aria-hidden="true">
+            <div class="eyebrow">Iteration · AP 2.7–2.8</div>
+            <h1>The same repetition in two forms</h1>
+            <div class="slide-body">
+                <div class="columns">
+                    <div>
+                        <h3>for</h3>
+                        <pre><code>for (int k = 3; k &lt;= 12; k += 3) {
+    System.out.print(k + &quot; &quot;);
+}</code></pre>
+                    </div>
+                    <div>
+                        <h3>while</h3>
+                        <pre><code>int k = 3;
+while (k &lt;= 12) {
+    System.out.print(k + &quot; &quot;);
+    k += 3;
+}</code></pre>
+                    </div>
+                </div>
+                <div class="note">Both print <code>3 6 9 12 </code>. Preserve the initialization, condition, body, and
+                    update when converting.</div>
+                <p>A <code>for</code> loop often fits counting. A <code>while</code> loop often fits repetition until
+                    some changing state reaches a goal.</p>
+            </div>
+        </section>
+        <section class="slide " data-number="15" data-title="A trace table makes state visible" aria-label="Slide 15"
+            aria-hidden="true">
+            <div class="eyebrow">Iteration · Tracing</div>
+            <h1>A trace table makes state visible</h1>
+            <div class="slide-body">
+                <div class="columns">
+                    <div>
+                        <pre><code>int total = 0;
+for (int k = 1; k &lt;= 4; k++) {
+    total += k;
+}</code></pre>
+                    </div>
+                    <div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>k at test</th>
+                                    <th>Condition</th>
+                                    <th>total after body</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>true</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>true</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>true</td>
+                                    <td>6</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>true</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>false</td>
+                                    <td>10 (unchanged)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="note">The body runs 4 times. The condition is evaluated 5 times. Always include the final
+                    failed condition check.</div>
+            </div>
+        </section>
+        <section class="slide " data-number="16" data-title="Off-by-one errors start at the edges" aria-label="Slide 16"
+            aria-hidden="true">
+            <div class="eyebrow">Iteration · Boundaries</div>
+            <h1>Off-by-one errors start at the edges</h1>
+            <div class="slide-body">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Loop header</th>
+                            <th>Values of i</th>
+                            <th>Body executions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>i = 0; i &lt; 5; i++</code></td>
+                            <td>0, 1, 2, 3, 4</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td><code>i = 0; i &lt;= 5; i++</code></td>
+                            <td>0, 1, 2, 3, 4, 5</td>
+                            <td>6</td>
+                        </tr>
+                        <tr>
+                            <td><code>i = 5; i &gt; 0; i--</code></td>
+                            <td>5, 4, 3, 2, 1</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td><code>i = 2; i &lt; 10; i += 3</code></td>
+                            <td>2, 5, 8</td>
+                            <td>3</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="note">For a non-unit step, list the actual values or count the arithmetic progression. Test
+                    zero iterations, one iteration, and the endpoint.</div>
+            </div>
+        </section>
+        <section class="slide " data-number="17" data-title="Three common loop errors" aria-label="Slide 17"
+            aria-hidden="true">
+            <div class="eyebrow">Iteration · Debugging</div>
+            <h1>Three common loop errors</h1>
+            <div class="slide-body">
+                <div class="columns">
+                    <div>
+                        <pre><code>
+// 1. Empty loop body
+for (int i = 0; i &lt; 5; i++);
+{
+    System.out.print(&quot;Hi&quot;);
+}
+<br>
+// 2. No progress
+int n = 3;
+while (n &gt; 0) {
+    System.out.print(n);
+}
+                        </code></pre>
+                    </div>
+                    <div>
+                        <ul>
+                            <li>The stray semicolon is an empty statement: the loop repeats it, then the block prints
+                                <code>Hi</code> once.
+                            </li>
+                            <li>The while loop never changes <code>n</code>, so it runs forever.</li>
+                            <li>A third trap: resetting an accumulator inside the loop loses the earlier total.</li>
+                        </ul>
+                        <div class="note">A loop can also miss its stopping value: <code>n != 0</code> with steps of 2
+                            may never reach 0.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="slide " data-number="18" data-title="Counters and accumulators track results"
+            aria-label="Slide 18" aria-hidden="true">
+            <div class="eyebrow">Algorithms · AP 2.9</div>
+            <h1>Counters and accumulators track results</h1>
+            <div class="slide-body">
+                <div class="columns">
+                    <div>
+                        <pre><code>int count = 0;
+int total = 0;
+for (int n = 1; n &lt;= 10; n++) {
+    if (n % 3 == 0) {
+        count++;
+        total += n;
+    }
+}</code></pre>
+                    </div>
+                    <div>
+                        <ul>
+                            <li>A <strong>counter</strong> records how many values match.</li>
+                            <li>An <strong>accumulator</strong> combines matching values.</li>
+                            <li>Initialize a sum to <code>0</code>. Initialize a product to <code>1</code>.</li>
+                        </ul>
+                        <p>What are <code>count</code> and <code>total</code> after this loop?</p>
+                    </div>
+                </div>
+                <details class="answer">
+                    <summary>Reveal answer</summary>
+                    <div>Matching values: <code>3, 6, 9</code>. <code>count = 3</code> and <code>total = 18</code>.
+                    </div>
+                </details>
+            </div>
+        </section>
+        <section class="slide " data-number="19" data-title="Processing a number one digit at a time"
+            aria-label="Slide 19" aria-hidden="true">
+            <div class="eyebrow">Algorithms · AP 2.9</div>
+            <h1>Processing a number one digit at a time</h1>
+            <div class="slide-body">
+                <div class="columns">
+                    <div>
+                        <pre><code>int number = 5072;
+int sum = 0;
+while (number &gt; 0) {
+    int digit = number % 10;
+    sum += digit;
+    number /= 10;
+}</code></pre>
+                    </div>
+                    <div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>number before</th>
+                                    <th>digit</th>
+                                    <th>sum after</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>5072</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>507</td>
+                                    <td>7</td>
+                                    <td>9</td>
+                                </tr>
+                                <tr>
+                                    <td>50</td>
+                                    <td>0</td>
+                                    <td>9</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>5</td>
+                                    <td>14</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="note">For a nonnegative integer, <code>% 10</code> extracts the last digit and integer
+                    division by 10 removes it. Input 0 produces sum 0 without entering the loop.</div>
+            </div>
+        </section>
+        <section class="slide " data-number="20" data-title="Different questions need different state"
+            aria-label="Slide 20" aria-hidden="true">
+            <div class="eyebrow">Algorithms · AP 2.9</div>
+            <h1>Different questions need different state</h1>
+            <div class="slide-body">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Goal</th>
+                            <th>State and update</th>
+                            <th>Important boundary</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Average</td>
+                            <td>Track sum and count; use <code>(double) sum / count</code>.</td>
+                            <td>Handle count 0 before dividing.</td>
+                        </tr>
+                        <tr>
+                            <td>Minimum / maximum</td>
+                            <td>Start with a valid first value; replace when a better value appears.</td>
+                            <td>Handle an empty input separately.</td>
+                        </tr>
+                        <tr>
+                            <td>Divisibility / factors</td>
+                            <td>Test <code>number % candidate == 0</code>.</td>
+                            <td>A divisor cannot be 0.</td>
+                        </tr>
+                        <tr>
+                            <td>Any match / every match</td>
+                            <td>Track whether a match or failure has appeared.</td>
+                            <td>Decide what an empty input means.</td>
+                        </tr>
+                        <tr>
+                            <td>Frequency of a condition</td>
+                            <td>Increment only when the condition is true.</td>
+                            <td>Initialize the count before the loop.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="note">An initial maximum of 0 fails when every input is negative. Choose initial values that
+                    fit the input domain.</div>
+            </div>
+        </section>
+        <section class="slide " data-number="21" data-title="String positions begin at zero" aria-label="Slide 21"
+            aria-hidden="true">
+            <div class="eyebrow">String algorithms · AP 2.10</div>
+            <h1>String positions begin at zero</h1>
+            <div class="slide-body">
+                <div class="columns">
+                    <div>
+                        <pre><code>String word = &quot;LEVEL&quot;;
+int count = 0;
+for (int i = 0; i &lt; word.length(); i++) {
+    String letter = word.substring(i, i + 1);
+    if (letter.equals(&quot;E&quot;)) {
+        count++;
+    }
+}</code></pre>
+                    </div>
+                    <div>
+                        <ul>
+                            <li>Valid character indices: <code>0</code> through <code>length() - 1</code>.</li>
+                            <li><code>substring(start, end)</code> includes start and excludes end.</li>
+                            <li><code>substring(i, i + 1)</code> gives one character as a String.</li>
+                            <li>This loop counts 2 occurrences of <code>"E"</code>.</li>
+                        </ul>
+                        <div class="note">The empty String has length 0, so this traversal runs zero times.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="slide " data-number="22" data-title="Building a new String" aria-label="Slide 22"
+            aria-hidden="true">
+            <div class="eyebrow">String algorithms · AP 2.10</div>
+            <h1>Building a new String</h1>
+            <div class="slide-body">
+                <div class="columns">
+                    <div>
+                        <pre><code>String text = &quot;robot&quot;;
+String reversed = &quot;&quot;;
+for (int i = text.length() - 1;
+     i &gt;= 0; i--) {
+    reversed += text.substring(i, i + 1);
+}</code></pre>
+                    </div>
+                    <div>
+                        <h3>Other common patterns</h3>
+                        <ul>
+                            <li><strong>Filter:</strong> append only characters that meet a condition.</li>
+                            <li><strong>Search:</strong> look for a character or substring.</li>
+                            <li><strong>Palindrome:</strong> compare the original String with its reverse.</li>
+                        </ul>
+                        <div class="note">Strings are immutable. An operation creates a new String value; assignment
+                            stores the new reference.</div>
+                    </div>
+                </div>
+                <details class="answer">
+                    <summary>Reveal answer</summary>
+                    <div><code>reversed</code> becomes <code>"tobor"</code>. The original <code>text</code> stays
+                        <code>"robot"</code>.
+                    </div>
+                </details>
+            </div>
+        </section>
+        <section class="slide " data-number="23" data-title="The inner loop restarts each time" aria-label="Slide 23"
+            aria-hidden="true">
+            <div class="eyebrow">Nested iteration · AP 2.11</div>
+            <h1>The inner loop restarts each time</h1>
+            <div class="slide-body">
+                <div class="columns">
+                    <div>
+                        <pre><code>for (int row = 1; row &lt;= 3; row++) {
+    for (int col = 1; col &lt;= 4; col++) {
+        System.out.print(&quot;*&quot;);
+    }
+    System.out.println();
+}</code></pre>
+                    </div>
+                    <div>
+                        <h3>Output</h3>
+                        <pre><code>****
+****
+****</code></pre>
+                        <ul>
+                            <li>3 outer iterations.</li>
+                            <li>4 inner iterations for each row.</li>
+                            <li>12 star prints and 3 newline prints.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="note">An inner-loop variable declared in its header is initialized again each time execution
+                    reaches that inner loop.</div>
+            </div>
+        </section>
+        <section class="slide " data-number="24" data-title="Dependent bounds change the total" aria-label="Slide 24"
+            aria-hidden="true">
+            <div class="eyebrow">Nested iteration · AP 2.11</div>
+            <h1>Dependent bounds change the total</h1>
+            <div class="slide-body">
+                <div class="columns">
+                    <div>
+                        <pre><code>int count = 0;
+for (int row = 1; row &lt;= 4; row++) {
+    for (int col = 1; col &lt;= row; col++) {
+        count++;
+    }
+}
+                        </code></pre>
+                    </div>
+                    <div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>row</th>
+                                    <th>Inner iterations</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>4</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <details class="answer">
+                    <summary>Reveal answer</summary>
+                    <div><code>count = 1 + 2 + 3 + 4 = 10</code>. With <code>n</code> rows, the total is
+                        <code>n(n + 1) / 2</code>. It is not 4 × 4 because the inner bound changes.
+                    </div>
+                </details>
+            </div>
+        </section>
+        <section class="slide " data-number="25" data-title="Count operations as the input grows" aria-label="Slide 25"
+            aria-hidden="true">
+            <div class="eyebrow">Runtime · AP 2.12</div>
+            <h1>Count operations as the input grows</h1>
+            <div class="slide-body">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Pattern</th>
+                            <th>Body executions</th>
+                            <th>If n doubles</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>One pass from 0 to n − 1</td>
+                            <td>n</td>
+                            <td>About 2× as many</td>
+                        </tr>
+                        <tr>
+                            <td>Two separate passes of n each</td>
+                            <td>2n</td>
+                            <td>About 2× as many</td>
+                        </tr>
+                        <tr>
+                            <td>Nested loops, n by n</td>
+                            <td>n²</td>
+                            <td>About 4× as many</td>
+                        </tr>
+                        <tr>
+                            <td>Inner bounds 1, 2, …, n</td>
+                            <td>n(n + 1) / 2</td>
+                            <td>Approaches 4× as many</td>
+                        </tr>
+                        <tr>
+                            <td>Repeated positive integer halving</td>
+                            <td>About log₂(n)</td>
+                            <td>About one extra iteration</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="note">Compare counts of a stated operation under the same assumptions. Elapsed time also
+                    depends on the operations, hardware, and input.</div>
+            </div>
+        </section>
+        <section class="slide " data-number="26" data-title="What does this loop compute?" aria-label="Slide 26"
+            aria-hidden="true">
+            <div class="eyebrow">Iteration check</div>
+            <h1>What does this loop compute?</h1>
+            <div class="slide-body">
+                <pre><code>int n = 1;
+int total = 0;
+while (n &lt; 10) {
+    if (n % 2 != 0) {
+        total += n;
+    }
+    n++;
+}</code></pre>
+                <p>Find the final <code>total</code>, the final <code>n</code>, and the number of body executions.</p>
+                <details class="answer">
+                    <summary>Reveal answer</summary>
+                    <div><code>total = 25</code> from <code>1 + 3 + 5 + 7 + 9</code>. Final <code>n = 10</code>. The
+                        body runs 9 times, and the condition is checked 10 times.</div>
+                </details>
+            </div>
+        </section>
+        <section class="slide " data-number="27" data-title="A recursive method calls itself" aria-label="Slide 27"
+            aria-hidden="true">
+            <div class="eyebrow">Recursion · AP 4.16</div>
+            <h1>A recursive method calls itself</h1>
+            <div class="slide-body">
+                <div class="columns">
+                    <div>
+                        <pre><code>public static int sumTo(int n) {
+    if (n == 0) {
+        return 0;      // base case
+    }
+    return n + sumTo(n - 1); // recursive call
+}</code></pre>
+                    </div>
+                    <div>
+                        <ul>
+                            <li>The <strong>base case</strong> returns without another recursive call.</li>
+                            <li>The recursive call solves a smaller version of the problem.</li>
+                            <li>Each call has its own parameters and local variables.</li>
+                            <li>For this method, assume <code>n &gt;= 0</code>. Each call moves toward 0.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="note">AP Topic 4.16 focuses on determining recursive results and behavior. Writing recursive
+                    code is outside the AP course and exam scope.</div>
+            </div>
+        </section>
+        <section class="slide " data-number="28" data-title="Calls pause until a result returns" aria-label="Slide 28"
+            aria-hidden="true">
+            <div class="eyebrow">Recursion · Call trace</div>
+            <h1>Calls pause until a result returns</h1>
+            <div class="slide-body">
+                <div class="columns">
+                    <div>
+                        <pre><code>sumTo(3)
+= 3 + sumTo(2)
+= 3 + (2 + sumTo(1))
+= 3 + (2 + (1 + sumTo(0)))
+= 3 + (2 + (1 + 0))
+= 6</code></pre>
+                    </div>
+                    <div>
+                        <div class="trace" data-trace="recursion">
+                            <div class="trace-head">Step through sumTo(3)</div>
+                            <p class="trace-state" aria-live="polite"></p>
+                            <div class="trace-controls"><button type="button" data-action="back">Back</button><button
+                                    type="button" data-action="step">Next step</button><button type="button"
+                                    data-action="reset">Reset</button></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="note">There are 4 calls in total, including the base case. Each waiting call retains its own
+                    value of n.</div>
+            </div>
+        </section>
+        <section class="slide " data-number="29" data-title="Before and after the recursive call" aria-label="Slide 29"
+            aria-hidden="true">
+            <div class="eyebrow">Recursion · Output order</div>
+            <h1>Before and after the recursive call</h1>
+            <div class="slide-body">
+                <div class="columns">
+                    <div>
+                        <pre><code>public static void show(int n) {
+    if (n == 0) {
+        return;
+    }
+    System.out.print(n + &quot; &quot;);
+    show(n - 1);
+    System.out.print(n + &quot; &quot;);
+}</code></pre>
+                    </div>
+                    <div>
+                        <p>What prints for <code>show(3)</code>?</p>
+                        <ul>
+                            <li>The first print runs while calls move toward the base case.</li>
+                            <li>The second print runs as calls return.</li>
+                            <li>A return resumes the caller immediately after its recursive call.</li>
+                        </ul>
+                    </div>
+                </div>
+                <details class="answer">
+                    <summary>Reveal answer</summary>
+                    <div><code>3 2 1 1 2 3 </code>. The base case prints nothing. The waiting calls finish in the order
+                        n = 1, then 2, then 3.</div>
+                </details>
+            </div>
+        </section>
+        <section class="slide " data-number="30" data-title="Repeated calls count separately" aria-label="Slide 30"
+            aria-hidden="true">
+            <div class="eyebrow">Recursion · AP 4.16</div>
+            <h1>Repeated calls count separately</h1>
+            <div class="slide-body">
+                <div class="columns">
+                    <div>
+                        <pre><code>public static int grow(int n) {
+    if (n &lt;= 1) {
+        return 1;
+    }
+    return grow(n - 1) + grow(n - 1);
+}</code></pre>
+                    </div>
+                    <div>
+                        <p>What does <code>grow(3)</code> return? How many method calls occur, including the first call?
+                        </p>
+                        <div class="note">Draw a separate branch for each call, even when two calls use the same
+                            argument.</div>
+                    </div>
+                </div>
+                <details class="answer">
+                    <summary>Reveal answer</summary>
+                    <div><strong>Return value: 4.</strong> Each <code>grow(2)</code> returns 2. <strong>Total calls:
+                            7</strong> = 1 call with n = 3, 2 calls with n = 2, and 4 base-case calls with n = 1.</div>
+                </details>
+            </div>
+        </section>
+        <section class="slide " data-number="31" data-title="Iteration and recursion both repeat work"
+            aria-label="Slide 31" aria-hidden="true">
+            <div class="eyebrow">Recursion · Comparison</div>
+            <h1>Iteration and recursion both repeat work</h1>
+            <div class="slide-body">
+                <div class="columns">
+                    <div>
+                        <h3>Iterative sum</h3>
+                        <pre><code>public static int sumToLoop(int n) {
+    int total = 0;
+    for (int k = 1; k &lt;= n; k++) {
+        total += k;
+    }
+    return total;
+}</code></pre>
+                    </div>
+                    <div>
+                        <h3>Recursive sum</h3>
+                        <pre><code>public static int sumTo(int n) {
+    if (n == 0) {
+        return 0;
+    }
+    return n + sumTo(n - 1);
+}</code></pre>
+                    </div>
+                </div>
+                <div class="note">For n ≥ 0, both return the same sum. The loop tracks progress in k and total.
+                    Recursion tracks progress through parameters and waiting calls. General conversions may require an
+                    explicit stack.</div>
+            </div>
+        </section>
+        <section class="slide " data-number="32" data-title="Three ideas to explain without running code"
+            aria-label="Slide 32" aria-hidden="true">
+            <div class="eyebrow">Final check</div>
+            <h1>Three ideas to explain without running code</h1>
+            <div class="slide-body">
+                <ol class="checks">
+                    <li>Why can <code>x &gt; 0 &amp;&amp; y / x &gt; 2</code> safely handle <code>x = 0</code>?</li>
+                    <li>How many times does <code>for (int i = 2; i &lt;= 14; i += 4)</code> run?</li>
+                    <li>If a recursive method prints only after its recursive call, when do those print statements
+                        execute?</li>
+                </ol>
+                <details class="answer">
+                    <summary>Reveal answer</summary>
+                    <div>
+                        <ol>
+                            <li>The first condition is false, so Java skips the division.</li>
+                            <li>4 times, with i = 2, 6, 10, 14.</li>
+                            <li>As calls return from the base case, beginning with the deepest waiting call.</li>
+                        </ol>
+                    </div>
+                </details>
+            </div>
+        </section>
+        <section class="slide " data-number="33" data-title="What you should be able to do" aria-label="Slide 33"
+            aria-hidden="true">
+            <div class="eyebrow">Study checklist</div>
+            <h1>What you should be able to do</h1>
+            <div class="slide-body">
+                <div class="columns">
+                    <div>
+                        <ul>
+                            <li>Evaluate Boolean expressions and apply De Morgan’s laws.</li>
+                            <li>Trace independent, chained, and nested decisions.</li>
+                            <li>Explain short-circuit evaluation.</li>
+                            <li>Write and trace while and for loops.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul>
+                            <li>Use counters, accumulators, and digit algorithms.</li>
+                            <li>Traverse and build Strings safely.</li>
+                            <li>Count nested-loop operations and compare growth.</li>
+                            <li>Trace recursive calls, returns, and output.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="note">When checking an algorithm, try a boundary value, a typical value, and an input that
+                    makes the body run zero times.</div>
+            </div>
+        </section>
+        <section class="slide reference" data-number="34" data-title="Coverage &amp; presentation controls"
+            aria-label="Slide 34" aria-hidden="true">
+            <div class="eyebrow">Reference</div>
+            <h1>Coverage &amp; presentation controls</h1>
+            <div class="slide-body">
+                <div class="columns">
+                    <div>
+                        <h3>Course alignment</h3>
+                        <p>Class Unit 4 covers AP Unit 2, Topics 2.1–2.12, plus AP Topic 4.16 on recursion.</p>
+                        <p>Examples and review questions in this slideshow are original.</p>
+                        <p><a href="https://apcentral.collegeboard.org/media/pdf/ap-computer-science-a-course-and-exam-description.pdf"
+                                target="_blank" rel="noopener">College Board: AP Computer Science A Course and Exam
+                                Description</a></p>
+                        <p>Effective Fall 2025. Unit 2: printed pages 53–71. Recursion: printed page 120.</p>
+                    </div>
+                    <div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Control</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>← / → or Page Up / Down</td>
+                                    <td>Previous / next slide</td>
+                                </tr>
+                                <tr>
+                                    <td>Home / End</td>
+                                    <td>First / last slide</td>
+                                </tr>
+                                <tr>
+                                    <td>A</td>
+                                    <td>Show / hide this slide’s answer</td>
+                                </tr>
+                                <tr>
+                                    <td>T</td>
+                                    <td>Topic navigator</td>
+                                </tr>
+                                <tr>
+                                    <td>F</td>
+                                    <td>Full screen</td>
+                                </tr>
+                                <tr>
+                                    <td>Print button</td>
+                                    <td>All slides, including answers</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+<footer><button type="button" id="previous" aria-label="Previous slide">←</button><span id="position"
+        aria-live="polite"></span>
+    <div id="progress" aria-hidden="true">
+        <div id="bar"></div>
+    </div><span id="slide-name"></span><button type="button" id="next" aria-label="Next slide">→</button>
+</footer>
+<dialog id="navigator" aria-labelledby="navigator-title">
+    <div class="dialog-header">
+        <h2 id="navigator-title">Unit 4 topics</h2><button type="button" id="close-topics">Close</button>
+    </div>
+    <div class="topic-list"></div>
+</dialog>
+<noscript>
+    <style>
+        #viewport {
+            height: auto;
+            display: block;
+            overflow: visible
+        }
+
+        #stage {
+            height: auto;
+            width: auto
+        }
+
+        .slide {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: auto;
+            min-height: 720px
+        }
+
+        .columns {
+            grid-template-columns: 1fr
+        }
+
+        header,
+        footer {
+            display: none
+        }
+    </style>This slideshow works best with JavaScript enabled. All slides are listed below.
+</noscript>
+<script>
+    'use strict';
+    const slides = [...document.querySelectorAll('.slide')];
+    const stage = document.querySelector('#stage');
+    const viewport = document.querySelector('#viewport');
+    const dialog = document.querySelector('#navigator');
+    let current = 0;
+    function fitContent(s) { const b = s.querySelector(".slide-body"); if (!b || !s.offsetHeight || s.classList.contains("cover")) return; b.style.transform = "none"; b.style.transformOrigin = "top left"; const available = 720 - 48 - b.offsetTop; const scale = Math.min(1, available / Math.max(1, b.scrollHeight)); b.style.transform = `scale(${scale})`; }
+    function fit() { const s = Math.min(viewport.clientWidth / 1280, viewport.clientHeight / 720); stage.style.transform = `scale(${s})`; }
+    function go(n, writeHash = true) { current = Math.max(0, Math.min(slides.length - 1, n)); slides.forEach((s, i) => { s.classList.toggle('active', i === current); s.setAttribute('aria-hidden', String(i !== current)); s.inert = i !== current; }); document.querySelector('#position').textContent = `${current + 1} / ${slides.length}`; document.querySelector('#slide-name').textContent = slides[current].dataset.title; document.querySelector('#bar').style.width = `${100 * (current + 1) / slides.length}%`; document.querySelector('#previous').disabled = current === 0; document.querySelector('#next').disabled = current === slides.length - 1; document.querySelectorAll('.topic-list button').forEach((b, i) => b.classList.toggle('current', i === current)); fitContent(slides[current]); if (writeHash) history.replaceState(null, '', `#slide-${current + 1}`); fit(); }
+    function fromHash() { const match = location.hash.match(/^#slide-(\d+)$/); go(match ? Number(match[1]) - 1 : 0, false); }
+    document.querySelectorAll(".answer").forEach(d => d.addEventListener("toggle", () => fitContent(d.closest(".slide"))));
+    function toggleAnswer() { const d = slides[current].querySelector('.answer'); if (d) d.open = !d.open; }
+    document.querySelector('#previous').onclick = () => go(current - 1);
+    document.querySelector('#next').onclick = () => go(current + 1);
+    document.querySelector('#topics').onclick = () => dialog.showModal();
+    document.querySelector('#close-topics').onclick = () => dialog.close();
+    slides.forEach((s, i) => { const b = document.createElement('button'); b.type = 'button'; const small = document.createElement('small'); small.textContent = s.querySelector('.eyebrow').textContent; b.append(small, `${String(i + 1).padStart(2, '0')}  ${s.dataset.title}`); b.onclick = () => { go(i); dialog.close(); }; document.querySelector('.topic-list').append(b); });
+    async function full() { try { if (document.fullscreenElement) await document.exitFullscreen(); else if (document.documentElement.requestFullscreen) await document.documentElement.requestFullscreen(); } catch (e) { document.querySelector('#fullscreen').textContent = 'Use browser full screen'; } }
+    document.querySelector('#fullscreen').onclick = full;
+    document.addEventListener('fullscreenchange', () => { document.body.classList.toggle('full', !!document.fullscreenElement); fit(); });
+    document.addEventListener('keydown', ev => { if (dialog.open || ev.ctrlKey || ev.metaKey || ev.altKey || /INPUT|TEXTAREA|SELECT/.test(ev.target.tagName)) return; const key = ev.key.toLowerCase(); if (['arrowright', 'pagedown', 'arrowleft', 'pageup', 'home', 'end'].includes(key)) { ev.preventDefault(); if (key === 'home') go(0); else if (key === 'end') go(slides.length - 1); else go(current + (['arrowright', 'pagedown'].includes(key) ? 1 : -1)); } else if (key === ' ' && ev.target === document.body) { ev.preventDefault(); go(current + 1); } else if (key === 'a') toggleAnswer(); else if (key === 't') dialog.showModal(); else if (key === 'f') full(); });
+    window.addEventListener('resize', fit); window.addEventListener('hashchange', fromHash);
+    let savedAnswers = []; let savedInert = [];
+    window.addEventListener('beforeprint', () => { savedAnswers = [...document.querySelectorAll('.answer')].map(d => d.open); savedInert = slides.map(s => s.inert); document.querySelectorAll('.answer').forEach(d => d.open = true); slides.forEach(s => { s.inert = false; s.style.display = "block"; fitContent(s); }); });
+    window.addEventListener('afterprint', () => { document.querySelectorAll('.answer').forEach((d, i) => d.open = savedAnswers[i]); slides.forEach((s, i) => { s.inert = savedInert[i]; s.style.display = ""; }); fit(); });
+    document.querySelector('#print').onclick = () => window.print();
+    const steps = ['Call sumTo(3). Pause while sumTo(2) runs.', 'Call sumTo(2). Pause while sumTo(1) runs.', 'Call sumTo(1). Pause while sumTo(0) runs.', 'Base case: sumTo(0) returns 0.', 'Resume n = 1: return 1 + 0 = 1.', 'Resume n = 2: return 2 + 1 = 3.', 'Resume n = 3: return 3 + 3 = 6.'];
+    document.querySelectorAll('.trace').forEach(t => { let i = 0; const update = () => { t.querySelector('.trace-state').textContent = `${i + 1} / ${steps.length}: ${steps[i]}`; t.querySelector('[data-action="back"]').disabled = i === 0; t.querySelector('[data-action="step"]').disabled = i === steps.length - 1; }; t.querySelectorAll('button').forEach(b => b.onclick = () => { i = b.dataset.action === 'reset' ? 0 : Math.max(0, Math.min(steps.length - 1, i + (b.dataset.action === 'step' ? 1 : -1))); update(); }); update(); });
+    fromHash();
+</script>
