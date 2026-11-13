@@ -1,213 +1,203 @@
-# **Intro to CS Practice Exam**
+<style>
+.answer-key-horizontal {
+display: flex;
+flex-wrap: wrap;
+gap: 8px 28px;
+padding-left: 28px;
+}
+.answer-key-horizontal li {
+margin: 0;
+min-width: 45px;
+}
+</style>
 
-**Name:** ____________________________________
+<div class="title">
+<h1>Intro to CS Practice Exam</h1>
+<div class="print-on">
+<strong>Name:</strong>&nbsp;<span>&nbsp;</span>
+</div>
+</div>
 
----
+## Multiple Choice
 
-# **Multiple Choice**
+Choose the best answer for each question.
 
-### **15 Questions**
+##### 1. Which shape is blue only on the left side?
 
----
-
-### **1. Which shape is blue only on the left side?** 
-
-A. `Rect(50, 50, 40, 40, fill=gradient('blue', 'white', start='left'))`
-
-B. `Rect(50, 50, 40, 40, fill=gradient('white', 'blue', start='left'))`
-
-C. `Rect(50, 50, 40, 40, fill=gradient('blue', 'white'))`
-
-D. `Rect(50, 50, 40, 40, fill='blue')`
-
----
-
-### **2. Which line of code is written correctly?** 
-
-A. `Oval(150, 150, 80, 40 fill='purple')`
-
-B. `Oval(150, 150, 80, 40, fill=purple)`
-
-C. `Oval(150, 150, 80, 40, fill='purple')`
-
-D. `Oval(150, 150, 80, 40, 'fill=purple')`
-
----
-
-### **3. Which of the following is NOT a built-in shape property?** 
-
-A. `opacity`
-
-B. `rotateAngle`
-
-C. `speed`
-
-D. `border`
-
----
-
-### **4. Which line of code would draw a circle with a black border?** 
-
-A. `Circle(200, 200, 30, border='black')`
-
-B. `Circle(200, 200, 30, fillBorder='black')`
-
-C. `Circle(200, 200, 30, outline='black')`
-
-D. `Circle(200, 200, 30, borderColor='black')`
-
----
-
-### **5. Which lines of code would draw a dashed vertical line down the center of the canvas?** 
-
-<table class="answer-table">
+<table class="mcq-choices">
 <tr>
-
-<td>
-A.
-
-<pre>
-Line(200, 0, 200, 400, dashes=True)
-</pre>
-
-</td>
-
-<td>
-B.
-
-<pre>
-Line(0, 200, 400, 200, dashes=True)
-</pre>
-
-</td>
-
+<td><strong>A.</strong> <span class="answer-code">Rect(50, 50, 40, 40, fill=gradient('blue', 'white', start='left'))</span></td>
+<td><strong>B.</strong> <span class="answer-code">Rect(50, 50, 40, 40, fill=gradient('white', 'blue', start='left'))</span></td>
 </tr>
-
 <tr>
-
-<td>
-C.
-
-<pre>
-Line(0, 0, 400, 400, dashes=True)
-</pre>
-
-</td>
-
-<td>
-D.
-
-<pre>
-Line(400, 0, 0, 400, dashes=True)
-</pre>
-
-</td>
-
+<td><strong>C.</strong> <span class="answer-code">Rect(50, 50, 40, 40, fill=gradient('blue', 'white'))</span></td>
+<td><strong>D.</strong> <span class="answer-code">Rect(50, 50, 40, 40, fill='blue')</span></td>
 </tr>
 </table>
 
----
+##### 2. Which line of code is written correctly?
 
-### **6. Which event handler automatically repeats many times every second?** 
+<table class="mcq-choices">
+<tr>
+<td><strong>A.</strong> <span class="answer-code">Oval(150, 150, 80, 40 fill='purple')</span></td>
+<td><strong>B.</strong> <span class="answer-code">Oval(150, 150, 80, 40, fill=purple)</span></td>
+</tr>
+<tr>
+<td><strong>C.</strong> <span class="answer-code">Oval(150, 150, 80, 40, fill='purple')</span></td>
+<td><strong>D.</strong> <span class="answer-code">Oval(150, 150, 80, 40, 'fill=purple')</span></td>
+</tr>
+</table>
 
-A. `onMousePress`
+##### 3. Which of the following is NOT a built-in shape property?
 
-B. `onKeyPress`
+<table class="mcq-choices">
+<tr>
+<td><strong>A.</strong> <span class="answer-code">opacity</span></td>
+<td><strong>B.</strong> <span class="answer-code">rotateAngle</span></td>
+</tr>
+<tr>
+<td><strong>C.</strong> <span class="answer-code">speed</span></td>
+<td><strong>D.</strong> <span class="answer-code">border</span></td>
+</tr>
+</table>
 
-C. `onStep`
+##### 4. Which line of code would draw a circle with a black border?
 
-D. `redrawAll`
+<table class="mcq-choices">
+<tr>
+<td><strong>A.</strong> <span class="answer-code">Circle(200, 200, 30, border='black')</span></td>
+<td><strong>B.</strong> <span class="answer-code">Circle(200, 200, 30, fillBorder='black')</span></td>
+</tr>
+<tr>
+<td><strong>C.</strong> <span class="answer-code">Circle(200, 200, 30, outline='black')</span></td>
+<td><strong>D.</strong> <span class="answer-code">Circle(200, 200, 30, borderColor='black')</span></td>
+</tr>
+</table>
 
----
+<div class="break"></div>
 
-### **7. Which expression would place a shape 30 units below the mouse?** 
+##### 5. Which line of code would draw a dashed vertical line down the center of the canvas?
 
-A. `mouseX + 30`
+<table class="mcq-choices">
+<tr>
+<td><strong>A.</strong> <span class="answer-code">Line(200, 0, 200, 400, dashes=True)</span></td>
+<td><strong>B.</strong> <span class="answer-code">Line(0, 200, 400, 200, dashes=True)</span></td>
+</tr>
+<tr>
+<td><strong>C.</strong> <span class="answer-code">Line(0, 0, 400, 400, dashes=True)</span></td>
+<td><strong>D.</strong> <span class="answer-code">Line(400, 0, 0, 400, dashes=True)</span></td>
+</tr>
+</table>
 
-B. `mouseY - 30`
+##### 6. Which event handler automatically repeats many times every second?
 
-C. `mouseX - 30`
+<table class="mcq-choices">
+<tr>
+<td><strong>A.</strong> <span class="answer-code">onMousePress</span></td>
+<td><strong>B.</strong> <span class="answer-code">onKeyPress</span></td>
+</tr>
+<tr>
+<td><strong>C.</strong> <span class="answer-code">onStep</span></td>
+<td><strong>D.</strong> <span class="answer-code">redrawAll</span></td>
+</tr>
+</table>
 
-D. `mouseY + 30`
+##### 7. Which expression would place a shape 30 units below the mouse?
 
----
+<table class="mcq-choices">
+<tr>
+<td><strong>A.</strong> <span class="answer-code">mouseX + 30</span></td>
+<td><strong>B.</strong> <span class="answer-code">mouseY - 30</span></td>
+</tr>
+<tr>
+<td><strong>C.</strong> <span class="answer-code">mouseX - 30</span></td>
+<td><strong>D.</strong> <span class="answer-code">mouseY + 30</span></td>
+</tr>
+</table>
 
-### **8. How would you move this shape upward using its speed variable?** 
+##### 8. How would you move this shape upward using its speed variable?
 
 ```python
 bird = Circle(300, 300, 20, fill='yellow')
 bird.speedY = 8
 ```
 
-A. `bird.centerY += bird.speedY`
+<table class="mcq-choices">
+<tr>
+<td><strong>A.</strong> <span class="answer-code">bird.centerY += bird.speedY</span></td>
+<td><strong>B.</strong> <span class="answer-code">bird.centerX -= bird.speedY</span></td>
+</tr>
+<tr>
+<td><strong>C.</strong> <span class="answer-code">bird.centerY -= bird.speedY</span></td>
+<td><strong>D.</strong> <span class="answer-code">bird.speedY += bird.centerY</span></td>
+</tr>
+</table>
 
-B. `bird.centerX -= bird.speedY`
+##### 9. Which variable name is valid in Python?
 
-C. `bird.centerY -= bird.speedY`
+<table class="mcq-choices">
+<tr>
+<td><strong>A.</strong> <span class="answer-code">2circle</span></td>
+<td><strong>B.</strong> <span class="answer-code">my circle</span></td>
+</tr>
+<tr>
+<td><strong>C.</strong> <span class="answer-code">def</span></td>
+<td><strong>D.</strong> <span class="answer-code">circle2</span></td>
+</tr>
+</table>
 
-D. `bird.speedY += bird.centerY`
+<div class="break"></div>
 
----
-
-### **9. Which variable name is valid in Python?** 
-
-A. `2circle`
-
-B. `my circle`
-
-C. `def`
-
-D. `circle2`
-
----
-
-### **10. How many stars will be created after the mouse is clicked 4 times?** 
+##### 10. How many stars will be created after the mouse is clicked 4 times?
 
 ```python
 def onMousePress(mouseX, mouseY):
     Star(mouseX, mouseY, 25, 5, fill='gold')
 ```
 
-A. 1
+<table class="mcq-choices">
+<tr>
+<td><strong>A.</strong> <span class="answer-code">1</span></td>
+<td><strong>B.</strong> <span class="answer-code">2</span></td>
+</tr>
+<tr>
+<td><strong>C.</strong> <span class="answer-code">4</span></td>
+<td><strong>D.</strong> <span class="answer-code">5</span></td>
+</tr>
+</table>
 
-B. 2
+##### 11. Which line correctly checks if a shape touches a point?
 
-C. 4
+<table class="mcq-choices">
+<tr>
+<td><strong>A.</strong> <span class="answer-code">if rect.hits(mouseX, mouseY):</span></td>
+<td><strong>B.</strong> <span class="answer-code">if rect.hitsShape(mouseX, mouseY):</span></td>
+</tr>
+<tr>
+<td><strong>C.</strong> <span class="answer-code">if rect.hit(mouseX, mouseY):</span></td>
+<td><strong>D.</strong> <span class="answer-code">if rect.touches(mouseX, mouseY):</span></td>
+</tr>
+</table>
 
-D. 5
-
----
-
-### **11. Which line correctly checks if a shape touches a point?** 
-
-A. `if rect.hits(mouseX, mouseY):`
-
-B. `if rect.hitsShape(mouseX, mouseY):`
-
-C. `if rect.hit(mouseX, mouseY):`
-
-D. `if rect.touches(mouseX, mouseY):`
-
----
-
-### **12. What is wrong with this code?** 
+##### 12. What is wrong with this code?
 
 ```python
 if score > 10
     Label('Winner!', 200, 200)
 ```
 
-A. `Label` cannot be used in conditionals.
+<table class="mcq-choices">
+<tr>
+<td><strong>A.</strong> <span class="answer-code">Label</span> cannot be used in conditionals.</td>
+<td><strong>B.</strong> The <span class="answer-code">if</span> statement is missing a colon.</td>
+</tr>
+<tr>
+<td><strong>C.</strong> <span class="answer-code">score</span> must be in quotes.</td>
+<td><strong>D.</strong> <span class="answer-code">&gt;</span> is not a valid operator.</td>
+</tr>
+</table>
 
-B. The `if` statement is missing a colon.
-
-C. `score` must be in quotes.
-
-D. `>` is not a valid operator.
-
----
-
-### **13. How many circles will be drawn if the mouse is pressed at `(250, 50)`?** 
+##### 13. How many circles will be drawn if the mouse is pressed at `(250, 50)`?
 
 ```python
 def onMousePress(mouseX, mouseY):
@@ -218,85 +208,33 @@ def onMousePress(mouseX, mouseY):
         Circle(mouseX, mouseY, 10, fill='blue')
 ```
 
-A. 0
-
-B. 1
-
-C. 2
-
-D. 3
-
----
-
-### **14. Which program moves the circle left only when the left arrow key is pressed?** 
-
-<table class="answer-table">
+<table class="mcq-choices">
 <tr>
-
-<td>
-A.
-
-<pre>
-c = Circle(200, 200, 30)
-
-def onKeyPress(key):
-    if key == 'left':
-        c.centerX -= 50
-</pre>
-
-</td>
-
-<td>
-B.
-
-<pre>
-c = Circle(200, 200, 30)
-
-def onKeyPress(key):
-    if key == left:
-        c.centerX -= 50
-</pre>
-
-</td>
-
+<td><strong>A.</strong> <span class="answer-code">0</span></td>
+<td><strong>B.</strong> <span class="answer-code">1</span></td>
 </tr>
-
 <tr>
-
-<td>
-C.
-
-<pre>
-c = Circle(200, 200, 30)
-
-def onKeyPress(key):
-    if key = 'left':
-        c.centerX -= 50
-</pre>
-
-</td>
-
-<td>
-D.
-
-<pre>
-c = Circle(200, 200, 30)
-
-def onKeyPress(key):
-    if key != 'right':
-        c.centerY -= 50
-</pre>
-
-</td>
-
+<td><strong>C.</strong> <span class="answer-code">2</span></td>
+<td><strong>D.</strong> <span class="answer-code">3</span></td>
 </tr>
 </table>
 
----
-
 <div class="break"></div>
 
-### **15. What will happen when the mouse is pressed?** 
+##### 14. Which program moves the circle left only when the left arrow key is pressed?
+
+<table class="mcq-choices">
+<tr>
+<td><strong>A.</strong><br><span class="answer-code">c = Circle(200, 200, 30)<br>def onKeyPress(key):<br>&nbsp;&nbsp;&nbsp;&nbsp;if key == 'left':<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c.centerX -= 50</span></td>
+<td><strong>B.</strong><br><span class="answer-code">c = Circle(200, 200, 30)<br>def onKeyPress(key):<br>&nbsp;&nbsp;&nbsp;&nbsp;if key == left:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c.centerX -= 50</span></td>
+</tr>
+<tr>
+<td><strong>C.</strong><br><span class="answer-code">c = Circle(200, 200, 30)<br>def onKeyPress(key):<br>&nbsp;&nbsp;&nbsp;&nbsp;if key = 'left':<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c.centerX -= 50</span></td>
+<td><strong>D.</strong><br><span class="answer-code">c = Circle(200, 200, 30)<br>def onKeyPress(key):<br>&nbsp;&nbsp;&nbsp;&nbsp;if key != 'right':<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c.centerY -= 50</span></td>
+</tr>
+</table>
+
+##### 15. What will happen when the mouse is pressed?
 
 ```python
 box = Rect(100, 100, 100, 100, fill='green')
@@ -309,154 +247,132 @@ def onMousePress(mouseX, mouseY):
         msg.value = 'outside'
 ```
 
-A. The label will always say `'outside'`
-
-B. The label changes depending on where the mouse is clicked
-
-C. The program has an error
-
-D. The label never changes
-
----
+<table class="mcq-choices">
+<tr>
+<td><strong>A.</strong> The label will always say <span class="answer-code">'outside'</span>.</td>
+<td><strong>B.</strong> The label changes depending on where the mouse is clicked.</td>
+</tr>
+<tr>
+<td><strong>C.</strong> The program has an error.</td>
+<td><strong>D.</strong> The label never changes.</td>
+</tr>
+</table>
 
 <div class="break"></div>
 
-# **Matching**
+## Matching
 
-### **Questions 16–25**
+Match each term on the left to a description on the right. Questions 16–25.
 
-Match the terms on the left to the descriptions on the right.
-
-<table class="answer-table" style="width:100%; border-collapse:collapse; table-layout:fixed;border:none !important;">
-
+<table class="answer-table" style="width:100%; border-collapse:collapse; table-layout:fixed; border:none !important;">
 <colgroup>
-  <col style="width:45pt;">
-  <col style="width:140pt;">
-  <col>
+<col style="width:45pt;">
+<col style="width:140pt;">
+<col>
 </colgroup>
-
 <tr>
 <th style="text-align:center;">#</th>
 <th>Term</th>
 <th>Description</th>
 </tr>
-
 <tr>
-<td style="text-align:center;border:none !important;height:30pt;">16.</td>
-<td style="border:none !important;height:30pt;"><code>onStep</code></td>
-<td style="border:none !important;height:30pt;"><b>A.</b> a gradual blend between colors</td>
+<td style="text-align:center; border:none !important; height:30pt;">16.</td>
+<td style="border:none !important; height:30pt;"><code>onStep</code></td>
+<td style="border:none !important; height:30pt;"><strong>A.</strong> a gradual blend between colors</td>
 </tr>
-
 <tr>
-<td style="text-align:center;border:none !important;height:30pt;">17.</td>
-<td style="border:none !important;height:30pt;"><code>gradient</code></td>
-<td style="border:none !important;height:30pt;"><b>B.</b> a repeating function used for animation</td>
+<td style="text-align:center; border:none !important; height:30pt;">17.</td>
+<td style="border:none !important; height:30pt;"><code>gradient</code></td>
+<td style="border:none !important; height:30pt;"><strong>B.</strong> a repeating function used for animation</td>
 </tr>
-
 <tr>
-<td style="text-align:center;border:none !important;height:30pt;">18.</td>
-<td style="border:none !important;height:30pt;"><code>Group</code></td>
-<td style="border:none !important;height:30pt;"><b>C.</b> horizontal center position of a shape</td>
-
+<td style="text-align:center; border:none !important; height:30pt;">18.</td>
+<td style="border:none !important; height:30pt;"><code>Group</code></td>
+<td style="border:none !important; height:30pt;"><strong>C.</strong> horizontal center position of a shape</td>
 </tr>
-
 <tr>
-<td style="text-align:center;border:none !important;height:30pt;">19.</td>
-<td style="border:none !important;height:30pt;"><code>canvas</code></td>
-<td style="border:none !important;height:30pt;"><b>D.</b> a boolean property</td>
-
+<td style="text-align:center; border:none !important; height:30pt;">19.</td>
+<td style="border:none !important; height:30pt;"><code>canvas</code></td>
+<td style="border:none !important; height:30pt;"><strong>D.</strong> a boolean property</td>
 </tr>
-
 <tr>
-<td style="text-align:center;border:none !important;height:30pt;">20.</td>
-<td style="border:none !important;height:30pt;"><code>.dashes</code></td>
-<td style="border:none !important;height:30pt;"><b>E.</b> determines how much a shape is rotated</td>
-
+<td style="text-align:center; border:none !important; height:30pt;">20.</td>
+<td style="border:none !important; height:30pt;"><code>.dashes</code></td>
+<td style="border:none !important; height:30pt;"><strong>E.</strong> determines how much a shape is rotated</td>
 </tr>
-
 <tr>
-<td style="text-align:center;border:none !important;height:30pt;">21.</td>
-<td style="border:none !important;height:30pt;"><code>.centerX</code></td>
-<td style="border:none !important;height:30pt;"><b>AB.</b> the area where shapes are displayed</td>
-
+<td style="text-align:center; border:none !important; height:30pt;">21.</td>
+<td style="border:none !important; height:30pt;"><code>.centerX</code></td>
+<td style="border:none !important; height:30pt;"><strong>AB.</strong> the area where shapes are displayed</td>
 </tr>
-
 <tr>
-<td style="text-align:center;border:none !important;height:30pt;">22.</td>
-<td style="border:none !important;height:30pt;"><code>variable</code></td>
-<td style="border:none !important;height:30pt;"><b>AC.</b> checks whether a shape touches another shape</td>
-
+<td style="text-align:center; border:none !important; height:30pt;">22.</td>
+<td style="border:none !important; height:30pt;"><code>variable</code></td>
+<td style="border:none !important; height:30pt;"><strong>AC.</strong> checks whether a shape touches another shape</td>
 </tr>
-
 <tr>
-<td style="text-align:center;border:none !important;height:30pt;">23.</td>
-<td style="border:none !important;height:30pt;"><code>.rotateAngle</code></td>
-<td style="border:none !important;height:30pt;"><b>AD.</b> statements that compare values to decide what code runs</td>
-
+<td style="text-align:center; border:none !important; height:30pt;">23.</td>
+<td style="border:none !important; height:30pt;"><code>.rotateAngle</code></td>
+<td style="border:none !important; height:30pt;"><strong>AD.</strong> statements that compare values to decide what code runs</td>
 </tr>
-
 <tr>
-<td style="text-align:center;border:none !important;height:30pt;">24.</td>
-<td style="border:none !important;height:30pt;"><code>.hitsShape(shape)</code></td>
-<td style="border:none !important;height:30pt;"><b>AE.</b> a named object used to store information</td>
-
+<td style="text-align:center; border:none !important; height:30pt;">24.</td>
+<td style="border:none !important; height:30pt;"><code>.hitsShape(shape)</code></td>
+<td style="border:none !important; height:30pt;"><strong>AE.</strong> a named object used to store information</td>
 </tr>
-
 <tr>
-<td style="text-align:center;border:none !important;height:30pt;">25.</td>
-<td style="border:none !important;height:30pt;"><code>conditionals</code></td>
-
-<td style="border:none !important;height:30pt;"><b>ABC.</b> a collection of multiple shapes stored together</td>
+<td style="text-align:center; border:none !important; height:30pt;">25.</td>
+<td style="border:none !important; height:30pt;"><code>conditionals</code></td>
+<td style="border:none !important; height:30pt;"><strong>ABC.</strong> a collection of multiple shapes stored together</td>
 </tr>
-
 </table>
-
----
-
 <div class="break"></div>
 
-# **Short Answer**
+## Short Answer
 
-### **3 Questions**
-
----
-
-### **26.** 
-Describe a situation where someone misuses a computer or program in a way that would be considered unethical. Explain why the action is wrong. 
+### 26.
+Describe a situation where someone misuses a computer or program in a way that would be considered unethical. Explain why the action is wrong.
 
 <div class="spacer" style="--scale: 13.5;"></div>
 
----
-
-### **27.** 
+### 27.
 You receive a text message saying you won a free gaming console. The message includes a suspicious link.
 
-Explain **three ways** you could determine whether this message is safe or dangerous. 
+Explain **three ways** you could determine whether this message is safe or dangerous.
 
 <div class="spacer" style="--scale: 20.5;"></div>
 <div class="break"></div>
 
-### **28.** 
-Explain the dangers of sharing too much personal information online. What are ways to protect yourself? 
+### 28.
+Explain the dangers of sharing too much personal information online. What are ways to protect yourself?
 
-<div class="spacer" style="--scale: 20.5;"></div>
+<div class="spacer" style="--scale: 40.5;"></div>
 
-# **Answers**
-
-| MC | Matching |
-| :--- | :--- |
-| 1. A | 16. B |
-| 2. C | 17. A |
-| 3. C | 18. ABC |
-| 4. A | 19. AB |
-| 5. A | 20. D |
-| 6. C | 21. C |
-| 7. D | 22. AE |
-| 8. C | 23. E |
-| 9. D | 24. AC |
-| 10. C | 25. AD |
-| 11. A |  |
-| 12. B |  |
-| 13. C |  |
-| 14. A |  |
-| 15. B |  |
+<h3>Answer Key</h3>
+<ol class="answer-key answer-key-horizontal">
+<li><strong>A</strong></li>
+<li><strong>C</strong></li>
+<li><strong>C</strong></li>
+<li><strong>A</strong></li>
+<li><strong>A</strong></li>
+<li><strong>C</strong></li>
+<li><strong>D</strong></li>
+<li><strong>C</strong></li>
+<li><strong>D</strong></li>
+<li><strong>C</strong></li>
+<li><strong>A</strong></li>
+<li><strong>B</strong></li>
+<li><strong>C</strong></li>
+<li><strong>A</strong></li>
+<li><strong>B</strong></li>
+<li><strong>B</strong></li>
+<li><strong>A</strong></li>
+<li><strong>ABC</strong></li>
+<li><strong>AB</strong></li>
+<li><strong>D</strong></li>
+<li><strong>C</strong></li>
+<li><strong>AE</strong></li>
+<li><strong>E</strong></li>
+<li><strong>AC</strong></li>
+<li><strong>AD</strong></li>
+</ol>

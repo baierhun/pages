@@ -13,31 +13,31 @@ target = Rect(300, 150, 50, 100, fill='gold')
 
 ##### 1. Mouse Position
 
-Write an `onMousePress` function that changes the ball’s fill to green if the click is above the middle of the canvas. Otherwise, change its fill to purple.
+Write an `onMousePress` event handler that changes the ball’s fill to green if the click is above the middle of the canvas. Otherwise, change its fill to purple.
 
 <div style="height: 2in;"></div>
 
 ##### 2. Key Events
 
-Write an `onKeyPress` function that:
+Write an `onKeyPress` event handler that:
 
-- Moves the ball 10 pixels right when the right arrow is pressed.
-- Moves the ball 10 pixels left when the left arrow is pressed.
+- Moves the ball 10 to right when the right arrow is pressed.
+- Moves the ball 10 to left when the left arrow is pressed.
 - Does nothing when any other key is pressed.
 
 <div class="break"></div>
 
 ##### 3. Clicking a Shape
 
-Write an `onMousePress` function that increases the ball’s radius by 5 only if the click hits the ball.
+Write an `onMousePress` event handler that increases the ball’s radius by 5 only if the click hits the ball.
 
 <div style="height: 1.5in;"></div>
 
 ##### 4. Checking for Contact
 
-Write an `onKeyPress` function that does the following when the right arrow is pressed:
+Write an `onKeyPress` event handler that does the following when the right arrow is pressed:
 
-1. Moves the ball 10 pixels right.
+1. Moves the ball 10 to right.
 2. Checks whether the ball touches the target.
 3. Changes the target’s fill to red if they touch, or gold otherwise.
 
@@ -298,7 +298,7 @@ def onKeyPress(key):
 <table class="mcq-choices">
   <tr>
     <td><strong>A.</strong> The ball’s radius increases by 5.</td>
-    <td><strong>B.</strong> The ball moves up 2 pixels.</td>
+    <td><strong>B.</strong> The ball moves up 2.</td>
   </tr>
   <tr>
     <td><strong>C.</strong> The ball’s radius decreases by 2.</td>
