@@ -232,43 +232,7 @@ display: table-header-group;
 </tbody>
 </table>
 <div class="ai-rubric-score">
-<strong>Total:</strong> ______ / 40 &nbsp;&nbsp;&nbsp; <strong>Letter Grade:</strong> ______
+<strong>Total:</strong> ______ / 40
 </div>
-<table class="ai-grade-table">
-<caption>Final Letter Grade</caption>
-<thead>
-<tr>
-<th scope="col">A+</th>
-<th scope="col">A</th>
-<th scope="col">A−</th>
-<th scope="col">B+</th>
-<th scope="col">B</th>
-<th scope="col">B−</th>
-<th scope="col">C+</th>
-<th scope="col">C</th>
-<th scope="col">C−</th>
-<th scope="col">D+</th>
-<th scope="col">D</th>
-<th scope="col">D−</th>
-<th scope="col">F</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>39–40</td>
-<td>37–38</td>
-<td>35–36</td>
-<td>33–34</td>
-<td>31–32</td>
-<td>29–30</td>
-<td>27–28</td>
-<td>25–26</td>
-<td>23–24</td>
-<td>21–22</td>
-<td>19–20</td>
-<td>16–18</td>
-<td>0–15</td>
-</tr>
-</tbody>
-</table>
+
 </div>
